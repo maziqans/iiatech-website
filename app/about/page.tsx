@@ -35,11 +35,10 @@ const milestones = [
 
 const certifications = [
   "HRDCorp Registered Training Provider",
-  "ISO 9001:2015 Quality Management",
-  "Certified Training Partner - Microsoft",
-  "Certified Training Partner - AWS",
-  "EC-Council Accredited Training Center",
-  "PMI Registered Education Provider",
+  "Certified PCEB Training Provider",
+  "Certified Accredited HRDCorp Trainer",
+  "Certified CyberSecurity Educator Professional",
+  "Malaysian Association for Training Providers (MATPRO) member"
 ]
 
 export default function AboutPage() {
