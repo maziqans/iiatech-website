@@ -161,17 +161,25 @@ export default function AboutPage() {
             </p>
           </div>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid md:grid-cols-3 gap-12 lg:gap-16 pt-8">
             {values.map((value) => (
-              <div 
-                key={value.title} 
-                className="bg-card border border-border/50 rounded-xl p-6 hover:shadow-sm hover:border-border/80 transition-all"
-              >
-                <div className="h-10 w-10 rounded-lg bg-muted/70 flex items-center justify-center mb-4">
-                  <value.icon className="h-5 w-5 text-foreground/60" />
+              <div key={value.title} className="relative group">
+                {/* Large background letter */}
+                <span className="absolute -top-10 -left-6 text-[8rem] leading-none font-bold text-muted/30 -z-10 group-hover:text-foreground/5 transition-colors duration-500 select-none">
+                  {value.letter}
+                </span>
+                
+                <div className="flex flex-col h-full pt-4">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-muted/60 text-foreground/70">
+                      <value.icon className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-2xl font-semibold text-foreground tracking-tight">{value.title}</h3>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    {value.description}
+                  </p>
                 </div>
-                <h3 className="font-medium text-foreground mb-2">{value.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
