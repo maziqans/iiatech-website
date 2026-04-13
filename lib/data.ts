@@ -25,6 +25,59 @@ export interface Trainer {
 }
 
 export const trainings: Training[] = [
+  // New Programs
+  {
+    id: "cs-sme",
+    slug: "cyber-threats-smes",
+    title: "Cyber Threats and Scams Training for SMEs",
+    category: "cyber-security",
+    description: "Essential cybersecurity awareness and protection training tailored for Small and Medium Enterprises.",
+    duration: "2 days",
+    trainerId: "trainer-ammar",
+    pdfUrl: "/training-pdfs/cs-sme.pdf",
+    objectives: ["Identify common cyber threats", "Protect SME infrastructure", "Recognize scams and phishing"],
+    prerequisites: ["None"],
+    targetAudience: ["SME Owners", "Employees", "IT Staff"]
+  },
+  {
+    id: "cs-isms",
+    slug: "iso27001-isms",
+    title: "ISO27001 (ISMS)",
+    category: "cyber-security",
+    description: "In-depth training on implementing and managing an Information Security Management System (ISMS) based on ISO 27001.",
+    duration: "3 days",
+    trainerId: "trainer-ammar",
+    pdfUrl: "/training-pdfs/iso27001.pdf",
+    objectives: ["Understand ISO 27001 framework", "Implement ISMS", "Conduct risk assessments"],
+    prerequisites: ["Basic IT knowledge"],
+    targetAudience: ["IT Managers", "Security Officers", "Compliance Professionals"]
+  },
+  {
+    id: "cs-awareness",
+    slug: "cybersecurity-awareness",
+    title: "CyberSecurity Awareness",
+    category: "cyber-security",
+    description: "Fundamental cybersecurity training to build a security-first culture within your organization.",
+    duration: "1 day",
+    trainerId: "trainer-ammar",
+    pdfUrl: "/training-pdfs/cs-awareness.pdf",
+    objectives: ["Understand daily cyber risks", "Safe browsing habits", "Password management"],
+    prerequisites: ["None"],
+    targetAudience: ["All Employees"]
+  },
+  {
+    id: "ai-legal",
+    slug: "transforming-legal-with-ai",
+    title: "Transforming Legal with AI",
+    category: "ai",
+    description: "Explore how Artificial Intelligence is revolutionizing the legal industry and learn practical implementations.",
+    duration: "2 days",
+    trainerId: "trainer-azizul",
+    pdfUrl: "/training-pdfs/ai-legal.pdf",
+    objectives: ["Understand AI in legal context", "Automate document review", "Enhance legal research"],
+    prerequisites: ["Basic understanding of legal processes"],
+    targetAudience: ["Lawyers", "Legal Assistants", "Paralegals", "Law Firm Managers"]
+  },
   // Cyber Security
   {
     id: "cs-001",
@@ -453,76 +506,22 @@ export const trainings: Training[] = [
 
 export const trainers: Trainer[] = [
   {
-    id: "trainer-001",
-    name: "Ahmad Razak bin Ismail",
-    title: "Senior Cybersecurity Consultant",
-    bio: "Ahmad Razak has over 15 years of experience in cybersecurity, having worked with major financial institutions and government agencies in Malaysia. He holds CISSP, CEH, and CISM certifications and has conducted security assessments for organizations across Southeast Asia.",
-    expertise: ["Ethical Hacking", "Security Auditing", "ISO 27001", "Penetration Testing"],
-    trainings: ["cs-001", "cs-002"],
-    image: "/trainers/trainer-001.jpg"
+    id: "trainer-ammar",
+    name: "Ammar Haziq Bin Annas",
+    title: "Cyber Security Consultant",
+    bio: "Ammar Annas has over 5 years of experience in cybersecurity and trainings, having worked as a Cyber Security Engineer, AI Engineer, and Cyber Security Researcher. He holds CompTia CySA+, CCEP, CCNA, ACT and ISO 27001 LI certifications and has conducted security assessments and penetration testing for organizations across Southeast Asia.",
+    expertise: ["Ethical Hacking", "Security Auditing", "ISO 27001", "Penetration Testing", "AI", "IoT"],
+    trainings: ["cs-sme", "cs-isms", "cs-awareness"],
+    image: "/trainers/trainer-ammar.jpg"
   },
   {
-    id: "trainer-002",
-    name: "Dr. Sarah Chen Wei Lin",
-    title: "Network Security Specialist",
-    bio: "Dr. Sarah Chen holds a PhD in Computer Science from Universiti Malaya with specialization in network security. She has published extensively on intrusion detection systems and serves as a consultant to several multinational corporations.",
-    expertise: ["Network Security", "Firewall Management", "Risk Assessment", "Security Architecture"],
-    trainings: ["cs-003", "cs-004"],
-    image: "/trainers/trainer-002.jpg"
-  },
-  {
-    id: "trainer-003",
-    name: "Muhammad Hafiz bin Abdullah",
-    title: "Cloud Solutions Architect",
-    bio: "Hafiz is an AWS Certified Solutions Architect Professional and Microsoft Azure Expert with over 12 years of experience in cloud infrastructure design and implementation. He has led cloud migration projects for enterprises across various industries.",
-    expertise: ["AWS", "Microsoft Azure", "Cloud Architecture", "Infrastructure Design"],
-    trainings: ["it-001", "it-002"],
-    image: "/trainers/trainer-003.jpg"
-  },
-  {
-    id: "trainer-004",
-    name: "Tan Mei Ling",
-    title: "DevOps Engineer & Database Expert",
-    bio: "Mei Ling brings 10 years of hands-on experience in DevOps practices and database administration. She has implemented CI/CD pipelines for Fortune 500 companies and specializes in database optimization and high-availability solutions.",
-    expertise: ["DevOps", "CI/CD", "Docker", "Kubernetes", "SQL Server", "MySQL"],
-    trainings: ["it-003", "it-004"],
-    image: "/trainers/trainer-004.jpg"
-  },
-  {
-    id: "trainer-005",
-    name: "Dr. Rajesh Kumar",
-    title: "AI & Machine Learning Researcher",
-    bio: "Dr. Rajesh is a former research scientist at a leading AI lab with a PhD from MIT. He has published over 30 papers on machine learning and has helped numerous Malaysian companies implement AI solutions.",
-    expertise: ["Machine Learning", "Deep Learning", "TensorFlow", "PyTorch", "Computer Vision"],
-    trainings: ["ai-001", "ai-002"],
-    image: "/trainers/trainer-005.jpg"
-  },
-  {
-    id: "trainer-006",
-    name: "Nurul Aisyah binti Hassan",
-    title: "NLP & AI Strategy Consultant",
-    bio: "Aisyah specializes in natural language processing and AI business strategy. She has helped organizations across Malaysia and Singapore implement conversational AI and develop AI-driven business transformation roadmaps.",
-    expertise: ["NLP", "Chatbots", "AI Strategy", "Digital Transformation"],
-    trainings: ["ai-003", "ai-004"],
-    image: "/trainers/trainer-006.jpg"
-  },
-  {
-    id: "trainer-007",
-    name: "David Wong Chee Keong",
-    title: "PMP & Agile Coach",
-    bio: "David is a certified PMP and Professional Scrum Master with over 18 years of project management experience. He has coached hundreds of project managers and led agile transformations for major corporations in Malaysia.",
-    expertise: ["Project Management", "Agile", "Scrum", "PRINCE2", "Stakeholder Management"],
-    trainings: ["gen-001", "gen-002"],
-    image: "/trainers/trainer-007.jpg"
-  },
-  {
-    id: "trainer-008",
-    name: "Fatimah binti Omar",
-    title: "Business Analysis & Strategy Expert",
-    bio: "Fatimah is a certified CBAP with extensive experience in business analysis and strategic planning. She has led digital transformation initiatives for government agencies and private sector organizations across ASEAN.",
-    expertise: ["Business Analysis", "Requirements Engineering", "Digital Strategy", "Process Improvement"],
-    trainings: ["gen-003", "gen-004"],
-    image: "/trainers/trainer-008.jpg"
+    id: "trainer-azizul",
+    name: "Azizul Ariff Bin Puat Nelson",
+    title: "IT & AI Consultant",
+    bio: "Azizul Nelson is an Experienced System Administrator with over 8 years of hands-on expertise in managing hybrid IT environments, including Windows Server, Microsoft 365, and Azure. Proven ability to troubleshoot hardware/software issues, implement application security protocols, and manage enterprise authentication systems such as Active Directory and Entra ID.",
+    expertise: ["AI", "Law", "Information Technology"],
+    trainings: ["ai-legal"],
+    image: "/trainers/trainer-azizul.jpg"
   }
 ]
 

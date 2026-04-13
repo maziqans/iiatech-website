@@ -64,7 +64,7 @@ const stats = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col animate-in fade-in duration-1000">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center">
         <div className="absolute inset-0 bg-gradient-to-b from-muted/20 via-background to-background" />

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ConsultantsPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen animate-in fade-in duration-1000">
       {/* Header - Neutral white/grey styling */}
       <section className="bg-muted/30 border-b border-border/40 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

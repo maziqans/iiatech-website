@@ -46,7 +46,7 @@ const certifications = [
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col animate-in fade-in duration-1000">
       {/* Hero Section - Neutral styling */}
       <section className="relative py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-muted/20 to-background" />
