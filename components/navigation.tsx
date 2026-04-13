@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import Image from "public/images"
+import Image from "next/images"
 import { useState, useRef, useEffect, useCallback } from "react"
 import { ChevronDown, Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
