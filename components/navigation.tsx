@@ -67,7 +67,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
             <div className="relative w-10 h-10 shrink-0">
-              <Image src="/IIA-logo.png" alt="IIA Technology Logo" fill sizes="40px" className="object-contain" priority />
+              <Image src="/images/iia-logo.png" alt="IIA Technology Logo" fill sizes="40px" className="object-contain" priority />
             </div>
             <span className="text-lg font-medium text-foreground tracking-tight">
               IIA Technology
