@@ -6,26 +6,25 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 
 const values = [
   {
-    icon: Target,
-    title: "Excellence",
-    description: "We strive for excellence in every training program, ensuring participants gain practical, applicable skills.",
-  },
-  {
+    letter: "I",
     icon: Lightbulb,
     title: "Innovation",
     description: "Staying ahead of industry trends to deliver advanced training content and methodologies.",
   },
   {
-    icon: Users,
-    title: "Collaboration",
-    description: "Working closely with organizations to understand their unique needs and deliver tailored solutions.",
-  },
-  {
+    letter: "I",
     icon: Shield,
     title: "Integrity",
     description: "Maintaining the highest ethical standards in all our business practices and training delivery.",
   },
+  {
+    letter: "A",
+    icon: Target,
+    title: "Attainable",
+    description: "Ensuring our training programs and learning goals remain highly accessible and achievable for all professionals.",
+  },
 ]
+
 
 const milestones = [
   { year: "2020", event: "Company established with a vision to transform professional training" },
