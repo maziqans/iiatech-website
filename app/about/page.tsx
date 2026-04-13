@@ -67,7 +67,7 @@ export default function AboutPage() {
                 As an HRDCorp registered training provider, we are committed to delivering 
                 high quality, practical training that creates a meaningful difference. Our team of expert 
                 consultants brings together decades of industry experience across Cyber Security, 
-                Information Technology, Artificial Intelligence, and Business Skills.
+                Information Technology, and Business Skills.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Button asChild size="lg" variant="outline" className="text-sm border-foreground/20 hover:bg-foreground hover:text-background transition-all">

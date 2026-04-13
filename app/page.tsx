@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Shield, Monitor, Brain, Briefcase, Award, Users, BookOpen, CheckCircle2, Target } from "lucide-react"
+import { ArrowRight, Shield, Monitor, Briefcase, Award, Users, BookOpen, CheckCircle2, Target } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { StatsCounter } from "@/components/stats-counter"
@@ -18,12 +18,6 @@ const trainingCategories = [
     description: "Master cloud computing, DevOps, and enterprise Information Technology infrastructure.",
     icon: Monitor,
     href: "/training/it",
-  },
-  {
-    title: "Artificial Intelligence",
-    description: "Unlock the power of artificial intelligence and machine learning.",
-    icon: Brain,
-    href: "/training/ai",
   },
   {
     title: "General",
@@ -83,7 +77,7 @@ export default function Home() {
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
                 IIA Technology delivers exceptional professional training in Cyber Security, 
-                Information Technology, Artificial Intelligence, and Business Skills. Transform your team with our programs that are fully claimable under HRDCorp.
+                Information Technology, and Business Skills. Transform your team with our programs that are fully claimable under HRDCorp.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button asChild size="lg" variant="outline" className="text-sm border-foreground/20 hover:bg-foreground hover:text-background transition-all">

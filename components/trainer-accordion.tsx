@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { useSearchParams } from "next/navigation"
 import Link from "next/link"
-import { ChevronDown, User, ArrowRight } from "lucide-react"
+import { ChevronDown, User, FileText } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 import { trainers, getTrainingById, categoryLabels, type TrainingCategory } from "@/lib/data"
@@ -112,9 +112,11 @@ export function TrainerAccordion() {
                       {trainerTrainings.map((training) => {
                         if (!training) return null
                         return (
-                          <Link
+                        <a
                             key={training.id}
-                            href={`/training/${training.category}?highlight=${training.id}`}
+                          href={training.pdfUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
                             className="group flex items-center justify-between p-3.5 bg-muted/40 hover:bg-muted/70 rounded-lg transition-colors"
                           >
                             <div className="flex-1 min-w-0">
@@ -129,9 +131,9 @@ export function TrainerAccordion() {
                               <Badge variant="outline" className="text-xs font-normal">
                                 {categoryLabels[training.category as TrainingCategory]}
                               </Badge>
-                              <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
+                            <FileText className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
                             </div>
-                          </Link>
+                        </a>
                         )
                       })}
                     </div>

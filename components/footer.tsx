@@ -10,7 +10,7 @@ export function Footer() {
             <h3 className="text-lg font-medium mb-4">IIA Technology</h3>
             <p className="text-background/60 text-sm leading-relaxed mb-4 max-w-sm">
               A registered training provider with HRDCorp Malaysia, delivering
-              professional training in Cyber Security, IT, AI, and General
+              professional training in Cyber Security, Information Technology, and General
               business skills.
             </p>
             <p className="text-sm text-background/40">
@@ -75,14 +75,6 @@ export function Footer() {
                   className="text-sm text-background/60 hover:text-background transition-colors"
                 >
                   IT
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/training/ai"
-                  className="text-sm text-background/60 hover:text-background transition-colors"
-                >
-                  AI
                 </Link>
               </li>
               <li>

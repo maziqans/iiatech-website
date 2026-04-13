@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowLeft, Clock, User } from "lucide-react"
+import { ArrowLeft, Clock, User, FileText } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { 
@@ -10,7 +10,7 @@ import {
   type TrainingCategory 
 } from "@/lib/data"
 
-const validCategories = ["cyber-security", "it", "ai", "general"]
+const validCategories = ["cyber-security", "it", "general"]
 
 interface PageProps {
   params: Promise<{ category: string }>
@@ -90,7 +90,7 @@ export default async function TrainingCategoryPage({ params }: PageProps) {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
                       <div className="flex items-center gap-2">
                         <Clock className="h-4 w-4" />
                         <span>{training.duration}</span>
@@ -107,6 +107,15 @@ export default async function TrainingCategoryPage({ params }: PageProps) {
                         </div>
                       )}
                     </div>
+                    <a
+                      href={training.pdfUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center rounded-md border border-border bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-muted hover:text-foreground w-full sm:w-auto"
+                    >
+                      <FileText className="mr-2 h-4 w-4" />
+                      View Brochure
+                    </a>
                   </CardContent>
                 </Card>
               )

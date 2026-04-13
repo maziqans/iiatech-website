@@ -10,7 +10,6 @@ import { Button } from "@/components/ui/button"
 const trainingCategories = [
   { label: "Cyber Security", href: "/training/cyber-security" },
   { label: "Information Technology", href: "/training/it" },
-  { label: "Artificial Intelligence", href: "/training/ai" },
   { label: "General", href: "/training/general" },
 ]
 
