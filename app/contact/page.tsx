@@ -39,7 +39,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <p className="text-sm text-muted-foreground">info@iiatechnology.com</p>
+                    <p className="text-sm text-muted-foreground">sales@iiatech.com.my</p>
                   </div>
                 </div>
 
@@ -49,7 +49,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Phone</p>
-                    <p className="text-sm text-muted-foreground">+60 3-1234 5678</p>
+                    <p className="text-sm text-muted-foreground">+60 3-</p>
                   </div>
                 </div>
 
@@ -60,9 +60,9 @@ export default function ContactPage() {
                   <div>
                     <p className="font-medium text-foreground">Address</p>
                     <p className="text-sm text-muted-foreground">
-                      Level 10, Menara IIA<br />
-                      Jalan Sultan Ismail<br />
-                      50250 Kuala Lumpur, Malaysia
+                      18-03A & 18-05, Pusat Perdagangan,<br />
+                      Plaza Azalea 10, Persiaran Bandar Raya,<br />
+                       Seksyen 14, 40000 Shah Alam, Selangor.
                     </p>
                   </div>
                 </div>
