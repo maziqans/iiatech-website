@@ -117,7 +117,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <div className="relative">
-              <Target className="absolute -top-6 -left-6 h-24 w-24 text-muted/20 -z-10 rotate-12" />
+              <Target className="absolute -top-6 -left-6 h-24 w-24 text-foreground/10 -z-10 rotate-12" />
               <div className="flex items-center gap-4 mb-6">
                 <div className="h-px w-8 bg-foreground/20" />
                 <span className="text-sm font-medium tracking-widest uppercase text-muted-foreground">Our Mission</span>
@@ -130,7 +130,7 @@ export default function AboutPage() {
             </div>
             
             <div className="relative">
-              <Globe className="absolute -top-6 -left-6 h-24 w-24 text-muted/20 -z-10 -rotate-12" />
+              <Globe className="absolute -top-6 -left-6 h-24 w-24 text-foreground/10 -z-10 -rotate-12" />
               <div className="flex items-center gap-4 mb-6">
                 <div className="h-px w-8 bg-foreground/20" />
                 <span className="text-sm font-medium tracking-widest uppercase text-muted-foreground">Our Vision</span>
@@ -164,7 +164,7 @@ export default function AboutPage() {
             {values.map((value) => (
               <div key={value.title} className="relative group">
                 {/* Large background letter */}
-                <span className="absolute -top-10 -left-6 text-[8rem] leading-none font-bold text-muted/30 -z-10 group-hover:text-foreground/5 transition-colors duration-500 select-none">
+                <span className="absolute -top-10 -left-6 text-[8rem] leading-none font-bold text-foreground/10 -z-10 group-hover:text-foreground/20 transition-colors duration-500 select-none">
                   {value.letter}
                 </span>
                 
