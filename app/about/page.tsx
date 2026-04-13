@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Award, Target, Users, Lightbulb, Shield, CheckCircle2, Building2, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 const values = [
   {
@@ -46,8 +47,9 @@ const certifications = [
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col animate-in fade-in duration-1000">
+    <div className="flex flex-col">
       {/* Hero Section - Neutral styling */}
+      <ScrollReveal>
       <section className="relative py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-muted/20 to-background" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -110,8 +112,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Mission & Vision Section */}
+      <ScrollReveal>
       <section className="py-20 bg-muted/20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-6">
@@ -141,8 +145,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Values Section */}
+      <ScrollReveal>
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
@@ -171,8 +177,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Timeline Section */}
+      <ScrollReveal>
       <section className="py-20 bg-muted/20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
@@ -213,8 +221,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Certifications Section */}
+      <ScrollReveal>
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -257,8 +267,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* CTA Section - Neutral styling */}
+      <ScrollReveal>
       <section className="py-20 bg-muted/20 border-t border-border/40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-semibold text-foreground mb-5 tracking-tight text-balance">
@@ -281,6 +293,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
     </div>
   )
 }

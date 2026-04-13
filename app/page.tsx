@@ -4,6 +4,7 @@ import { ArrowRight, Shield, Monitor, Brain, Briefcase, Award, Users, BookOpen, 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { StatsCounter } from "@/components/stats-counter"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 const trainingCategories = [
   {
@@ -64,8 +65,9 @@ const stats = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col animate-in fade-in duration-1000">
+    <div className="flex flex-col">
       {/* Hero Section */}
+      <ScrollReveal>
       <section className="relative min-h-[90vh] flex items-center">
         <div className="absolute inset-0 bg-gradient-to-b from-muted/20 via-background to-background" />
         
@@ -122,11 +124,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Animated Stats Section */}
       <StatsCounter stats={stats} />
 
       {/* Training Categories Section */}
+      <ScrollReveal>
       <section id="training" className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
@@ -165,8 +169,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Why Choose Us Section */}
+      <ScrollReveal>
       <section id="features" className="py-20 bg-muted/20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -222,8 +228,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* CTA Section - Neutral styling */}
+      <ScrollReveal>
       <section className="py-20 bg-muted/30 border-t border-border/40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-semibold text-foreground mb-5 tracking-tight text-balance">
@@ -246,6 +254,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
     </div>
   )
 }

@@ -24,7 +24,7 @@ export function StatsCounter({ stats }: StatsCounterProps) {
           observer.disconnect()
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: "0px 0px -10% 0px" }
     )
 
     if (sectionRef.current) {

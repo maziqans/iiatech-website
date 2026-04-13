@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Suspense } from "react" // 1. Added Suspense import
 import { TrainerAccordion } from "@/components/trainer-accordion"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 export const metadata: Metadata = {
   title: "Our Consultants | IIA Technology",
@@ -9,8 +10,9 @@ export const metadata: Metadata = {
 
 export default function ConsultantsPage() {
   return (
-    <div className="min-h-screen animate-in fade-in duration-1000">
+    <div className="min-h-screen">
       {/* Header - Neutral white/grey styling */}
+      <ScrollReveal>
       <section className="bg-muted/30 border-b border-border/40 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-semibold text-foreground mb-4 tracking-tight">Our Consultants</h1>
@@ -20,8 +22,10 @@ export default function ConsultantsPage() {
           </p>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Trainers List */}
+      <ScrollReveal>
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* 2. Wrapped in Suspense to handle search params during build */}
@@ -30,6 +34,7 @@ export default function ConsultantsPage() {
           </Suspense>
         </div>
       </section>
+      </ScrollReveal>
     </div>
   )
 }
