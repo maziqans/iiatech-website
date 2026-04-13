@@ -7,7 +7,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-lg font-medium mb-4">IIA Technology</h3>
+            <h3 className="text-lg font-medium mb-1">"IIA Technology"</h3>
+            <p className="text-sm text-background/60 mb-4">202403122231 (SA0613338-T)</p>
             <p className="text-background/60 text-sm leading-relaxed mb-4 max-w-sm">
               A registered training provider with HRDCorp Malaysia, delivering
               professional training in Cyber Security, Information Technology, and General
@@ -74,7 +75,7 @@ export function Footer() {
                   href="/training/it"
                   className="text-sm text-background/60 hover:text-background transition-colors"
                 >
-                  IT
+                  Information Technology
                 </Link>
               </li>
               <li>
