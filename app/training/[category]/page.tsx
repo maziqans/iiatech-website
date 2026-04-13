@@ -62,7 +62,7 @@ export default async function TrainingCategoryPage({ params }: PageProps) {
           <h1 className="text-4xl sm:text-5xl font-semibold text-foreground mb-4 tracking-tight">{categoryLabel} Training</h1>
           <p className="text-lg text-muted-foreground max-w-2xl">
             Explore our comprehensive {categoryLabel.toLowerCase()} training programs delivered by 
-            industry experts. All programs are HRDCorp claimable.
+            industry experts. All programs are fully claimable under HRDCorp.
           </p>
         </div>
       </section>

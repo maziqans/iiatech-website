@@ -9,7 +9,7 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 const trainingCategories = [
   {
     title: "Cyber Security",
-    description: "Protect your organization with industry-leading security training programs.",
+    description: "Protect your organization with highly recognized security training programs.",
     icon: Shield,
     href: "/training/cyber-security",
   },
@@ -42,12 +42,12 @@ const features = [
   {
     icon: Users,
     title: "Expert Trainers",
-    description: "Learn from industry veterans with real-world experience",
+    description: "Learn from industry veterans with extensive practical experience",
   },
   {
     icon: BookOpen,
     title: "Practical Learning",
-    description: "Hands-on exercises and case studies for immediate application",
+    description: "Practical exercises and case studies for immediate application",
   },
   {
     icon: Target,
@@ -79,11 +79,11 @@ export default function Home() {
                 HRDCorp Registered Training Provider
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-semibold leading-[1.12] text-foreground mb-6 tracking-tight text-balance">
-                Empowering Professionals Through Expert Training
+                Expert Training for Professional Excellence
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
-                IIA Technology delivers world-class professional training in Cyber Security, 
-                Information Technology, Artificial Intelligence, and Business Skills. Transform your team with our HRDCorp-claimable programs.
+                IIA Technology delivers exceptional professional training in Cyber Security, 
+                Information Technology, Artificial Intelligence, and Business Skills. Transform your team with our programs that are fully claimable under HRDCorp.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button asChild size="lg" variant="outline" className="text-sm border-foreground/20 hover:bg-foreground hover:text-background transition-all">
@@ -183,8 +183,8 @@ export default function Home() {
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 IIA Technology is a premier training provider registered with HRDCorp Malaysia. 
-                We specialize in delivering high-impact training programs designed to equip 
-                professionals with the skills needed to excel in today&apos;s rapidly evolving 
+                We specialize in delivering highly effective training programs designed to equip 
+                professionals with the skills needed to excel in the rapidly evolving 
                 technology landscape.
               </p>
               
@@ -239,7 +239,7 @@ export default function Home() {
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
             Contact us today to discuss your training needs and discover how our 
-            HRDCorp-claimable programs can benefit your organization.
+              training programs, which are fully claimable under HRDCorp, can benefit your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button asChild size="lg" variant="outline" className="text-sm border-foreground/20 hover:bg-foreground hover:text-background transition-all">

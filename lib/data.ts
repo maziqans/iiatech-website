@@ -518,7 +518,7 @@ export const trainers: Trainer[] = [
     id: "trainer-azizul",
     name: "Azizul Ariff Bin Puat Nelson",
     title: "Information Technology & Artificial Intelligence Consultant",
-    bio: "Azizul Nelson is an Experienced System Administrator with over 8 years of hands-on expertise in managing hybrid Information Technology environments, including Windows Server, Microsoft 365, and Azure. Proven ability to troubleshoot hardware/software issues, implement application security protocols, and manage enterprise authentication systems such as Active Directory and Entra ID.",
+    bio: "Azizul Nelson is an Experienced System Administrator with over 8 years of practical expertise in managing hybrid Information Technology environments, including Windows Server, Microsoft 365, and Azure. Proven ability to troubleshoot hardware and software issues, implement application security protocols, and manage enterprise authentication systems such as Active Directory and Entra ID.",
     expertise: ["Artificial Intelligence", "Law", "Information Technology"],
     trainings: ["ai-legal"],
     image: "/trainers/trainer-azizul.jpg"

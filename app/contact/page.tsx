@@ -4,7 +4,7 @@ import { ContactForm } from "@/components/contact-form"
 
 export const metadata: Metadata = {
   title: "Contact Us | IIA Technology",
-  description: "Get in touch with IIA Technology to discuss your training needs. We offer HRDCorp-claimable professional training programs.",
+  description: "Get in touch with IIA Technology to discuss your training needs. We offer professional training programs that are fully claimable under HRDCorp.",
 }
 
 export default function ContactPage() {

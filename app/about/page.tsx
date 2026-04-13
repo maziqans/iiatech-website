@@ -13,7 +13,7 @@ const values = [
   {
     icon: Lightbulb,
     title: "Innovation",
-    description: "Staying ahead of industry trends to deliver cutting-edge training content and methodologies.",
+    description: "Staying ahead of industry trends to deliver advanced training content and methodologies.",
   },
   {
     icon: Users,
@@ -60,16 +60,16 @@ export default function AboutPage() {
                 About IIA Technology
               </div>
               <h1 className="text-4xl sm:text-5xl font-semibold text-foreground mb-6 leading-tight tracking-tight text-balance">
-                Empowering Growth Through Knowledge & Expertise
+                Driving Growth Through Knowledge & Expertise
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Since 2009, IIA Technology has been at the forefront of professional training 
-                in Malaysia, helping organizations and individuals achieve their full potential 
-                through world-class training programs.
+                in Malaysia. We help organizations and individuals achieve their goals 
+                through exceptional training programs.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                As a HRDCorp registered training provider, we are committed to delivering 
-                high-quality, practical training that creates real impact. Our team of expert 
+                As an HRDCorp registered training provider, we are committed to delivering 
+                high quality, practical training that creates a meaningful difference. Our team of expert 
                 consultants brings together decades of industry experience across Cyber Security, 
                 Information Technology, Artificial Intelligence, and Business Skills.
               </p>
@@ -125,9 +125,9 @@ export default function AboutPage() {
               </div>
               <h2 className="text-xl font-semibold text-foreground mb-3">Our Mission</h2>
               <p className="text-muted-foreground leading-relaxed">
-                To empower professionals and organizations with the knowledge and skills 
+                To provide professionals and organizations with the knowledge and skills 
                 needed to thrive in the digital age. We are dedicated to delivering practical, 
-                high-impact training that creates measurable results and drives career advancement.
+                highly effective training that creates measurable results and drives career advancement.
               </p>
             </div>
             
