@@ -66,7 +66,9 @@ export function Navigation() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
-            <Image src="/IIA-logo.png" alt="IIA Technology Logo" width={32} height={32} className="rounded-lg object-contain" />
+            <div className="relative w-10 h-10 shrink-0">
+              <Image src="/iia-logo.png" alt="IIA Technology Logo" fill sizes="40px" className="object-contain" priority />
+            </div>
             <span className="text-lg font-medium text-foreground tracking-tight">
               IIA Technology
             </span>
