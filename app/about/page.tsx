@@ -28,12 +28,10 @@ const values = [
 ]
 
 const milestones = [
-  { year: "2009", event: "Company founded with a vision to transform professional training in Malaysia" },
-  { year: "2012", event: "Achieved HRDCorp registration and expanded training portfolio" },
-  { year: "2015", event: "Launched specialized Cyber Security training programs" },
-  { year: "2018", event: "Introduced Artificial Intelligence and Machine Learning training tracks" },
-  { year: "2021", event: "Reached milestone of 500+ professionals trained" },
-  { year: "2024", event: "Expanded team to 8 expert consultants across multiple domains" },
+  { year: "2020", event: "Company established with a vision to transform professional training" },
+  { year: "2024", event: "Company officially registered under SSM" },
+  { year: "2025", event: "Achieved status as an HRDCorp registered training provider" },
+  { year: "2026", event: "Became an official PECB training provider for ISO certifications" },
 ]
 
 const certifications = [
@@ -59,14 +57,14 @@ export default function AboutPage() {
                 <Building2 className="h-3.5 w-3.5" />
                 About IIA Technology
               </div>
-              <h1 className="text-4xl sm:text-5xl font-semibold text-foreground mb-6 leading-tight tracking-tight text-balance">
-                Driving Growth Through Knowledge & Expertise
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Since 2009, IIA Technology has been at the forefront of professional training 
-                in Malaysia. We help organizations and individuals achieve their goals 
-                through exceptional training programs.
-              </p>
+            <h1 className="text-4xl sm:text-5xl font-semibold text-foreground mb-6 leading-tight tracking-tight text-balance">
+              Redefine Professional Development With Tech Education
+            </h1>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Since 2020, IIA Technology has been at the forefront of professional training 
+              in Malaysia. We help organizations and individuals achieve their goals 
+              through exceptional training programs.
+            </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 As an HRDCorp registered training provider, we are committed to delivering 
                 high quality, practical training that creates a meaningful difference. Our team of expert 
@@ -99,11 +97,11 @@ export default function AboutPage() {
               <div className="absolute -bottom-5 -right-5 bg-card border border-border/50 rounded-xl p-5 shadow-md shadow-black/[0.02]">
                 <div className="grid grid-cols-2 gap-5">
                   <div className="text-center">
-                    <p className="text-2xl font-semibold text-foreground">15+</p>
+                    <p className="text-2xl font-semibold text-foreground">3</p>
                     <p className="text-xs text-muted-foreground">Years</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-2xl font-semibold text-foreground">500+</p>
+                    <p className="text-2xl font-semibold text-foreground">200+</p>
                     <p className="text-xs text-muted-foreground">Trained</p>
                   </div>
                 </div>
@@ -116,27 +114,29 @@ export default function AboutPage() {
 
       {/* Mission & Vision Section */}
       <ScrollReveal>
-      <section className="py-20 bg-muted/20">
+      <section className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-card border border-border/50 rounded-2xl p-8">
-              <div className="h-12 w-12 rounded-xl bg-muted flex items-center justify-center mb-5">
-                <Target className="h-6 w-6 text-foreground/70" />
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+            <div className="relative">
+              <Target className="absolute -top-6 -left-6 h-24 w-24 text-muted/20 -z-10 rotate-12" />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-px w-8 bg-foreground/20" />
+                <span className="text-sm font-medium tracking-widest uppercase text-muted-foreground">Our Mission</span>
               </div>
-              <h2 className="text-xl font-semibold text-foreground mb-3">Our Mission</h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-xl sm:text-2xl text-foreground leading-relaxed font-medium">
                 To provide professionals and organizations with the knowledge and skills 
                 needed to thrive in the digital age. We are dedicated to delivering practical, 
                 highly effective training that creates measurable results and drives career advancement.
               </p>
             </div>
             
-            <div className="bg-card border border-border/50 rounded-2xl p-8">
-              <div className="h-12 w-12 rounded-xl bg-muted flex items-center justify-center mb-5">
-                <Globe className="h-6 w-6 text-foreground/70" />
+            <div className="relative">
+              <Globe className="absolute -top-6 -left-6 h-24 w-24 text-muted/20 -z-10 -rotate-12" />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-px w-8 bg-foreground/20" />
+                <span className="text-sm font-medium tracking-widest uppercase text-muted-foreground">Our Vision</span>
               </div>
-              <h2 className="text-xl font-semibold text-foreground mb-3">Our Vision</h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-xl sm:text-2xl text-foreground leading-relaxed font-medium">
                 To be Malaysia&apos;s leading professional training provider, recognized for 
                 excellence in delivering transformative learning experiences that prepare 
                 individuals and organizations for the challenges of tomorrow.
