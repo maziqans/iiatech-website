@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono"
 
 export const metadata: Metadata = {
   title: 'IIA Technology | Professional Training Provider',
-  description: 'IIA Technology is a HRDCorp registered training provider in Malaysia, offering professional training in Cyber Security, IT, AI, and General business skills.',
+  description: 'IIA Technology is a HRDCorp registered training provider in Malaysia, offering professional training in Cyber Security, Information Technology, Artificial Intelligence, and General business skills.',
   generator: 'v0.app',
   icons: {
     icon: [

@@ -14,13 +14,13 @@ const trainingCategories = [
     href: "/training/cyber-security",
   },
   {
-    title: "IT",
-    description: "Master cloud computing, DevOps, and enterprise IT infrastructure.",
+    title: "Information Technology",
+    description: "Master cloud computing, DevOps, and enterprise Information Technology infrastructure.",
     icon: Monitor,
     href: "/training/it",
   },
   {
-    title: "AI",
+    title: "Artificial Intelligence",
     description: "Unlock the power of artificial intelligence and machine learning.",
     icon: Brain,
     href: "/training/ai",
@@ -83,7 +83,7 @@ export default function Home() {
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
                 IIA Technology delivers world-class professional training in Cyber Security, 
-                IT, AI, and Business Skills. Transform your team with our HRDCorp-claimable programs.
+                Information Technology, Artificial Intelligence, and Business Skills. Transform your team with our HRDCorp-claimable programs.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button asChild size="lg" variant="outline" className="text-sm border-foreground/20 hover:bg-foreground hover:text-background transition-all">

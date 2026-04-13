@@ -37,7 +37,7 @@ export const trainings: Training[] = [
     pdfUrl: "/training-pdfs/cs-sme.pdf",
     objectives: ["Identify common cyber threats", "Protect SME infrastructure", "Recognize scams and phishing"],
     prerequisites: ["None"],
-    targetAudience: ["SME Owners", "Employees", "IT Staff"]
+    targetAudience: ["SME Owners", "Employees", "Information Technology Staff"]
   },
   {
     id: "cs-isms",
@@ -49,8 +49,8 @@ export const trainings: Training[] = [
     trainerId: "trainer-ammar",
     pdfUrl: "/training-pdfs/iso27001.pdf",
     objectives: ["Understand ISO 27001 framework", "Implement ISMS", "Conduct risk assessments"],
-    prerequisites: ["Basic IT knowledge"],
-    targetAudience: ["IT Managers", "Security Officers", "Compliance Professionals"]
+    prerequisites: ["Basic Information Technology knowledge"],
+    targetAudience: ["Information Technology Managers", "Security Officers", "Compliance Professionals"]
   },
   {
     id: "cs-awareness",
@@ -68,13 +68,13 @@ export const trainings: Training[] = [
   {
     id: "ai-legal",
     slug: "transforming-legal-with-ai",
-    title: "Transforming Legal with AI",
+    title: "Transforming Legal with Artificial Intelligence",
     category: "ai",
     description: "Explore how Artificial Intelligence is revolutionizing the legal industry and learn practical implementations.",
     duration: "2 days",
     trainerId: "trainer-azizul",
     pdfUrl: "/training-pdfs/ai-legal.pdf",
-    objectives: ["Understand AI in legal context", "Automate document review", "Enhance legal research"],
+    objectives: ["Understand Artificial Intelligence in legal context", "Automate document review", "Enhance legal research"],
     prerequisites: ["Basic understanding of legal processes"],
     targetAudience: ["Lawyers", "Legal Assistants", "Paralegals", "Law Firm Managers"]
   },
@@ -97,12 +97,12 @@ export const trainings: Training[] = [
     prerequisites: [
       "Basic understanding of networking concepts",
       "Familiarity with operating systems (Windows/Linux)",
-      "IT security fundamentals knowledge"
+      "Information Technology security fundamentals knowledge"
     ],
     targetAudience: [
       "Security professionals",
       "Network administrators",
-      "IT auditors",
+      "Information Technology auditors",
       "Security consultants"
     ]
   },
@@ -122,11 +122,11 @@ export const trainings: Training[] = [
       "Prepare for ISO 27001 certification"
     ],
     prerequisites: [
-      "Basic IT knowledge",
+      "Basic Information Technology knowledge",
       "Understanding of business processes"
     ],
     targetAudience: [
-      "IT managers",
+      "Information Technology managers",
       "Security officers",
       "Compliance professionals",
       "Risk managers"
@@ -155,7 +155,7 @@ export const trainings: Training[] = [
       "Network administrators",
       "System administrators",
       "Security analysts",
-      "IT professionals"
+      "Information Technology professionals"
     ]
   },
   {
@@ -175,13 +175,13 @@ export const trainings: Training[] = [
     ],
     prerequisites: [
       "Basic cybersecurity knowledge",
-      "Understanding of enterprise IT systems"
+      "Understanding of enterprise Information Technology systems"
     ],
     targetAudience: [
       "Risk managers",
       "Security managers",
       "Compliance officers",
-      "IT auditors"
+      "Information Technology auditors"
     ]
   },
   // IT
@@ -201,14 +201,14 @@ export const trainings: Training[] = [
       "Optimize costs and performance"
     ],
     prerequisites: [
-      "Basic IT infrastructure knowledge",
+      "Basic Information Technology infrastructure knowledge",
       "Familiarity with virtualization concepts"
     ],
     targetAudience: [
       "Cloud architects",
       "System administrators",
       "DevOps engineers",
-      "IT professionals transitioning to cloud"
+      "Information Technology professionals transitioning to cloud"
     ]
   },
   {
@@ -234,7 +234,7 @@ export const trainings: Training[] = [
       "Azure administrators",
       "System administrators",
       "Cloud engineers",
-      "IT managers"
+      "Information Technology managers"
     ]
   },
   {
@@ -341,7 +341,7 @@ export const trainings: Training[] = [
     targetAudience: [
       "ML engineers",
       "Data scientists",
-      "AI researchers",
+      "Artificial Intelligence researchers",
       "Software engineers"
     ]
   },
@@ -374,17 +374,17 @@ export const trainings: Training[] = [
   {
     id: "ai-004",
     slug: "ai-business-leaders",
-    title: "AI for Business Leaders",
+    title: "Artificial Intelligence for Business Leaders",
     category: "ai",
-    description: "Strategic overview of AI implementation and digital transformation.",
+    description: "Strategic overview of Artificial Intelligence implementation and digital transformation.",
     duration: "2 days",
     trainerId: "trainer-006",
     pdfUrl: "/training-pdfs/ai-leaders.pdf",
     objectives: [
-      "Understand AI capabilities and limitations",
-      "Identify AI opportunities in your organization",
-      "Develop AI implementation strategies",
-      "Lead AI-driven transformation initiatives"
+      "Understand Artificial Intelligence capabilities and limitations",
+      "Identify Artificial Intelligence opportunities in your organization",
+      "Develop Artificial Intelligence implementation strategies",
+      "Lead Artificial Intelligence-driven transformation initiatives"
     ],
     prerequisites: [
       "Business management experience",
@@ -497,7 +497,7 @@ export const trainings: Training[] = [
     ],
     targetAudience: [
       "Business leaders",
-      "IT directors",
+      "Information Technology directors",
       "Strategy consultants",
       "Change managers"
     ]
@@ -509,17 +509,17 @@ export const trainers: Trainer[] = [
     id: "trainer-ammar",
     name: "Ammar Haziq Bin Annas",
     title: "Cyber Security Consultant",
-    bio: "Ammar Annas has over 5 years of experience in cybersecurity and trainings, having worked as a Cyber Security Engineer, AI Engineer, and Cyber Security Researcher. He holds CompTia CySA+, CCEP, CCNA, ACT and ISO 27001 LI certifications and has conducted security assessments and penetration testing for organizations across Southeast Asia.",
-    expertise: ["Ethical Hacking", "Security Auditing", "ISO 27001", "Penetration Testing", "AI", "IoT"],
+    bio: "Ammar Annas has over 5 years of experience in cybersecurity and trainings, having worked as a Cyber Security Engineer, Artificial Intelligence Engineer, and Cyber Security Researcher. He holds CompTia CySA+, CCEP, CCNA, ACT and ISO 27001 LI certifications and has conducted security assessments and penetration testing for organizations across Southeast Asia.",
+    expertise: ["Ethical Hacking", "Security Auditing", "ISO 27001", "Penetration Testing", "Artificial Intelligence", "IoT"],
     trainings: ["cs-sme", "cs-isms", "cs-awareness"],
     image: "/trainers/trainer-ammar.jpg"
   },
   {
     id: "trainer-azizul",
     name: "Azizul Ariff Bin Puat Nelson",
-    title: "IT & AI Consultant",
-    bio: "Azizul Nelson is an Experienced System Administrator with over 8 years of hands-on expertise in managing hybrid IT environments, including Windows Server, Microsoft 365, and Azure. Proven ability to troubleshoot hardware/software issues, implement application security protocols, and manage enterprise authentication systems such as Active Directory and Entra ID.",
-    expertise: ["AI", "Law", "Information Technology"],
+    title: "Information Technology & Artificial Intelligence Consultant",
+    bio: "Azizul Nelson is an Experienced System Administrator with over 8 years of hands-on expertise in managing hybrid Information Technology environments, including Windows Server, Microsoft 365, and Azure. Proven ability to troubleshoot hardware/software issues, implement application security protocols, and manage enterprise authentication systems such as Active Directory and Entra ID.",
+    expertise: ["Artificial Intelligence", "Law", "Information Technology"],
     trainings: ["ai-legal"],
     image: "/trainers/trainer-azizul.jpg"
   }
@@ -527,8 +527,8 @@ export const trainers: Trainer[] = [
 
 export const categoryLabels: Record<TrainingCategory, string> = {
   "cyber-security": "Cyber Security",
-  "it": "IT",
-  "ai": "AI",
+  "it": "Information Technology",
+  "ai": "Artificial Intelligence",
   "general": "General"
 }
 

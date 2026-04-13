@@ -31,7 +31,7 @@ const milestones = [
   { year: "2009", event: "Company founded with a vision to transform professional training in Malaysia" },
   { year: "2012", event: "Achieved HRDCorp registration and expanded training portfolio" },
   { year: "2015", event: "Launched specialized Cyber Security training programs" },
-  { year: "2018", event: "Introduced AI and Machine Learning training tracks" },
+  { year: "2018", event: "Introduced Artificial Intelligence and Machine Learning training tracks" },
   { year: "2021", event: "Reached milestone of 500+ professionals trained" },
   { year: "2024", event: "Expanded team to 8 expert consultants across multiple domains" },
 ]
@@ -71,7 +71,7 @@ export default function AboutPage() {
                 As a HRDCorp registered training provider, we are committed to delivering 
                 high-quality, practical training that creates real impact. Our team of expert 
                 consultants brings together decades of industry experience across Cyber Security, 
-                IT, AI, and Business Skills.
+                Information Technology, Artificial Intelligence, and Business Skills.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Button asChild size="lg" variant="outline" className="text-sm border-foreground/20 hover:bg-foreground hover:text-background transition-all">

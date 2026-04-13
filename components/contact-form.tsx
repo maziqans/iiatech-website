@@ -11,8 +11,8 @@ import { Spinner } from "@/components/ui/spinner"
 
 const trainingInterests = [
   { value: "cyber-security", label: "Cyber Security" },
-  { value: "it", label: "IT" },
-  { value: "ai", label: "AI" },
+  { value: "it", label: "Information Technology" },
+  { value: "ai", label: "Artificial Intelligence" },
   { value: "general", label: "General" },
   { value: "multiple", label: "Multiple Areas" },
 ]
