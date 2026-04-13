@@ -3,6 +3,7 @@ import Image from "next/image"
 import { ArrowRight, Shield, Monitor, Brain, Briefcase, Award, Users, BookOpen, CheckCircle2, Target } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { StatsCounter } from "@/components/stats-counter"
 
 const trainingCategories = [
   {
@@ -55,10 +56,10 @@ const features = [
 ]
 
 const stats = [
-  { value: "500+", label: "Professionals Trained" },
-  { value: "50+", label: "Training Programs" },
-  { value: "8", label: "Expert Consultants" },
-  { value: "15+", label: "Years Experience" },
+  { numericValue: 200, suffix: "+", label: "Professionals Trained" },
+  { numericValue: 15, suffix: "", label: "Training Programs" },
+  { numericValue: 5, suffix: "", label: "Expert Consultants" },
+  { numericValue: 3, suffix: "", label: "Years Experience" },
 ]
 
 export default function Home() {
@@ -122,19 +123,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section - Simple horizontal row */}
-      <section id="stats" className="py-16 border-y border-border/40">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-8 lg:justify-between">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <p className="text-4xl lg:text-5xl font-semibold text-foreground tracking-tight">{stat.value}</p>
-                <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Animated Stats Section */}
+      <StatsCounter stats={stats} />
 
       {/* Training Categories Section */}
       <section id="training" className="py-20">
