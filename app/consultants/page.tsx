@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Suspense } from "react" // 1. Added Suspense import
 import { TrainerAccordion } from "@/components/trainer-accordion"
 
 export const metadata: Metadata = {
@@ -23,7 +24,10 @@ export default function ConsultantsPage() {
       {/* Trainers List */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <TrainerAccordion />
+          {/* 2. Wrapped in Suspense to handle search params during build */}
+          <Suspense fallback={<div className="text-center py-10 text-muted-foreground">Loading expert team...</div>}>
+            <TrainerAccordion />
+          </Suspense>
         </div>
       </section>
     </div>
