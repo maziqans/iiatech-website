@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { useSearchParams } from "next/navigation"
 import Image from "next/image"
-import { ChevronDown, FileText } from "lucide-react"
+import { ChevronDown, FileText, User } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 import { trainers, getTrainingById, categoryLabels, type TrainingCategory } from "@/lib/data"
@@ -56,16 +56,20 @@ export function TrainerAccordion() {
               <div className="flex items-center gap-4">
                 <div
                   className={cn(
-                    "relative h-11 w-11 shrink-0 overflow-hidden rounded-full transition-opacity duration-300",
+                    "relative h-11 w-11 shrink-0 overflow-hidden rounded-full bg-muted/80 flex items-center justify-center transition-opacity duration-300",
                     isOpen && "opacity-0"
                   )}
                 >
-                  <Image
-                    src={trainer.image}
-                    alt={trainer.name}
-                    fill
-                    className="object-cover"
-                  />
+                  {trainer.id === 'trainer-ammar' ? (
+                    <Image
+                      src={trainer.image}
+                      alt={trainer.name}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <User className="h-5 w-5 text-muted-foreground" />
+                  )}
                 </div>
                 <div>
                   <h3 className="font-medium text-foreground">
@@ -90,17 +94,21 @@ export function TrainerAccordion() {
               )}
             >
               <div className="overflow-hidden">
-                <div className="border-t border-border/40">
-                  <div className="relative aspect-video w-1/2 max-w-sm mx-auto mt-6 overflow-hidden rounded-xl border border-border/30 shadow-sm">
-                    <Image
-                      src={trainer.image}
-                      alt={trainer.name}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 50vw, 400px"
-                    />
+                <div className="border-t border-border/40 flex flex-col sm:flex-row gap-6 p-5 pt-6 items-start">
+                  <div className="relative aspect-[3/4] w-48 shrink-0 overflow-hidden rounded-xl border border-border/30 shadow-sm bg-muted flex items-center justify-center">
+                    {trainer.id === 'trainer-ammar' ? (
+                      <Image
+                        src={trainer.image}
+                        alt={trainer.name}
+                        fill
+                        className="object-cover"
+                        sizes="192px"
+                      />
+                    ) : (
+                      <User className="h-16 w-16 text-muted-foreground/50" />
+                    )}
                   </div>
-                  <div className="p-5 pt-6">
+                  <div className="flex-1 min-w-0">
                     {/* Bio */}
                     <div className="mb-5">
                       <h4 className="font-medium text-xs text-muted-foreground uppercase tracking-wider mb-2">
