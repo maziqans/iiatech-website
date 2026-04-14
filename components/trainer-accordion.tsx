@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react"
 import { useSearchParams } from "next/navigation"
-import Link from "next/link"
-import { ChevronDown, User, FileText } from "lucide-react"
+import Image from "next/image"
+import { ChevronDown, FileText } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 import { trainers, getTrainingById, categoryLabels, type TrainingCategory } from "@/lib/data"
@@ -54,8 +54,18 @@ export function TrainerAccordion() {
               className="w-full flex items-center justify-between p-5 text-left hover:bg-muted/30 transition-colors"
             >
               <div className="flex items-center gap-4">
-                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-muted/80">
-                  <User className="h-5 w-5 text-muted-foreground" />
+                <div
+                  className={cn(
+                    "relative h-11 w-11 shrink-0 overflow-hidden rounded-full transition-opacity duration-300",
+                    isOpen && "opacity-0"
+                  )}
+                >
+                  <Image
+                    src={trainer.image}
+                    alt={trainer.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <h3 className="font-medium text-foreground">
@@ -75,67 +85,80 @@ export function TrainerAccordion() {
             {/* Trainer Details */}
             <div
               className={cn(
-                "grid transition-all duration-200 ease-out",
+                "grid transition-all duration-300 ease-in-out",
                 isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
               )}
             >
               <div className="overflow-hidden">
-                <div className="px-5 pb-5 border-t border-border/40 pt-5">
-                  {/* Bio */}
-                  <div className="mb-5">
-                    <h4 className="font-medium text-xs text-muted-foreground uppercase tracking-wider mb-2">
-                      Biography
-                    </h4>
-                    <p className="text-foreground/90 leading-relaxed text-sm">{trainer.bio}</p>
+                <div className="border-t border-border/40">
+                  <div className="relative aspect-video w-full overflow-hidden">
+                    <Image
+                      src={trainer.image}
+                      alt={trainer.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 90vw, 800px"
+                    />
                   </div>
-
-                  {/* Expertise */}
-                  <div className="mb-5">
-                    <h4 className="font-medium text-xs text-muted-foreground uppercase tracking-wider mb-2.5">
-                      Areas of Expertise
-                    </h4>
-                    <div className="flex flex-wrap gap-1.5">
-                      {trainer.expertise.map((skill) => (
-                        <Badge key={skill} variant="secondary" className="font-normal text-xs">
-                          {skill}
-                        </Badge>
-                      ))}
+                  <div className="p-5">
+                    {/* Bio */}
+                    <div className="mb-5">
+                      <h4 className="font-medium text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                        Biography
+                      </h4>
+                      <p className="text-foreground/90 leading-relaxed text-sm">{trainer.bio}</p>
                     </div>
-                  </div>
 
-                  {/* Trainings Offered - Now with links to training pages */}
-                  <div>
-                    <h4 className="font-medium text-xs text-muted-foreground uppercase tracking-wider mb-2.5">
-                      Training Programs
-                    </h4>
-                    <div className="space-y-2">
-                      {trainerTrainings.map((training) => {
-                        if (!training) return null
-                        return (
-                        <a
-                            key={training.id}
-                          href={training.pdfUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                            className="group flex items-center justify-between p-3.5 bg-muted/40 hover:bg-muted/70 rounded-lg transition-colors"
-                          >
-                            <div className="flex-1 min-w-0">
-                              <p className="font-medium text-sm text-foreground group-hover:text-primary transition-colors">
-                                {training.title}
-                              </p>
-                              <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1">
-                                {training.description}
-                              </p>
-                            </div>
-                            <div className="flex items-center gap-2 ml-3 shrink-0">
-                              <Badge variant="outline" className="text-xs font-normal">
-                                {categoryLabels[training.category as TrainingCategory]}
-                              </Badge>
-                            <FileText className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
-                            </div>
-                        </a>
-                        )
-                      })}
+                    {/* Expertise */}
+                    <div className="mb-5">
+                      <h4 className="font-medium text-xs text-muted-foreground uppercase tracking-wider mb-2.5">
+                        Areas of Expertise
+                      </h4>
+                      <div className="flex flex-wrap gap-1.5">
+                        {trainer.expertise.map((skill) => (
+                          <Badge key={skill} variant="secondary" className="font-normal text-xs">
+                            {skill}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Trainings Offered */}
+                    <div>
+                      <h4 className="font-medium text-xs text-muted-foreground uppercase tracking-wider mb-2.5">
+                        Training Programs
+                      </h4>
+                      <div className="space-y-2">
+                        {trainerTrainings.map((training) => {
+                          if (!training) return null
+                          return (
+                            <a
+                              key={training.id}
+                              href={training.pdfUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="group flex items-center justify-between p-3.5 bg-muted/40 hover:bg-muted/70 rounded-lg transition-colors"
+                            >
+                              <div className="flex-1 min-w-0">
+                                <p className="font-medium text-sm text-foreground group-hover:text-primary transition-colors">
+                                  {training.title}
+                                </p>
+                                <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1">
+                                  {training.description}
+                                </p>
+                              </div>
+                              <div className="flex items-center gap-2 ml-3 shrink-0">
+                                <Badge variant="outline" className="text-xs font-normal">
+                                  {categoryLabels[
+                                    training.category as TrainingCategory
+                                  ]}
+                                </Badge>
+                                <FileText className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                              </div>
+                            </a>
+                          )
+                        })}
+                      </div>
                     </div>
                   </div>
                 </div>

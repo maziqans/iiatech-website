@@ -39,7 +39,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <p className="text-sm text-muted-foreground">sales@iiatech.com.my</p>
+                    <p className="text-sm text-muted-foreground">aida@iiatech.com.my</p>
                   </div>
                 </div>
 
@@ -49,7 +49,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Phone</p>
-                    <p className="text-sm text-muted-foreground">+60 3-</p>
+                    <p className="text-sm text-muted-foreground">+60 3-3292 9219</p>
                   </div>
                 </div>
 
