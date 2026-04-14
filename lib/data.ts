@@ -54,11 +54,11 @@ export const trainings: Training[] = [
   },
   {
     id: "cs-awareness",
-    slug: "cybersecurity-awareness",
-    title: "CyberSecurity Awareness",
+    slug: "information-security-awareness",
+    title: "Information Security Awareness",
     category: "cyber-security",
     description: "Fundamental cybersecurity training to build a security-first culture within your organization.",
-    duration: "1 day",
+    duration: "2 days",
     trainerId: "trainer-ammar",
     pdfUrl: "/training-posters/cs-awareness.pdf",
     objectives: ["Understand daily cyber risks", "Safe browsing habits", "Password management"],
@@ -78,6 +78,45 @@ export const trainings: Training[] = [
     prerequisites: ["Basic understanding of legal processes"],
     targetAudience: ["Lawyers", "Legal Assistants", "Paralegals", "Law Firm Managers"]
   },
+  {
+    id: "ai-spm-success",
+    slug: "ai-exposure-spm-success",
+    title: "AI Exposure for SPM Success",
+    category: "it",
+    description: "Learn how to leverage AI tools for better study habits, efficient learning, and SPM success.",
+    duration: "1 day",
+    trainerId: "trainer-zafir",
+    pdfUrl: "/training-posters/ai-spm-success.pdf",
+    objectives: ["Understand AI tools", "Improve study efficiency", "Ethical use of AI"],
+    prerequisites: ["None"],
+    targetAudience: ["SPM Students", "Educators"]
+  },
+  {
+    id: "ai-at-work",
+    slug: "ai-at-work-practical-guide",
+    title: "How to Use AI at Work: A Practical Guide for Office Teams",
+    category: "it",
+    description: "A practical guide for office teams to integrate Artificial Intelligence into their daily workflows to enhance productivity.",
+    duration: "1 day",
+    trainerId: "trainer-zafir",
+    pdfUrl: "/training-posters/ai-at-work.pdf",
+    objectives: ["Automate daily tasks", "Enhance productivity with AI", "Improve workflow efficiency"],
+    prerequisites: ["Basic Information Technology skills"],
+    targetAudience: ["Office Teams", "Administrators", "Managers"]
+  },
+  {
+    id: "ai-study-smart",
+    slug: "ai-study-smart",
+    title: "AI Study Smart: AI-Powered Learning Skills for SPM Students & Beyond",
+    category: "it",
+    description: "Discover AI-powered learning skills and techniques to excel in SPM and further education.",
+    duration: "1 day",
+    trainerId: "trainer-ammar",
+    pdfUrl: "/training-posters/ai-study-smart.pdf",
+    objectives: ["Leverage AI for learning", "Develop smart study techniques", "Future-proof skills"],
+    prerequisites: ["None"],
+    targetAudience: ["SPM Students", "High School Students"]
+  },
 ]
 
 export const trainers: Trainer[] = [
@@ -87,7 +126,7 @@ export const trainers: Trainer[] = [
     title: "Cyber Security Consultant",
     bio: "Ammar Annas has over 5 years of experience in cybersecurity and trainings, having worked as a Cyber Security Engineer, Artificial Intelligence Engineer, and Cyber Security Researcher. He holds CompTia CySA+, CCEP, CCNA, ACT and ISO 27001 LI certifications and has conducted security assessments and penetration testing for organizations across Southeast Asia.",
     expertise: ["Ethical Hacking", "Security Auditing", "ISO 27001", "Penetration Testing", "Artificial Intelligence", "IoT"],
-    trainings: ["cs-sme", "cs-isms", "cs-awareness"],
+    trainings: ["cs-sme", "cs-isms", "cs-awareness", "ai-study-smart"],
     image: "/trainers/trainer-ammar.jpg"
   },
   {
@@ -98,6 +137,24 @@ export const trainers: Trainer[] = [
     expertise: ["Artificial Intelligence", "Law", "Information Technology"],
     trainings: ["ai-legal"],
     image: "/trainers/trainer-azizul.jpg"
+  },
+  {
+    id: "trainer-nazri",
+    name: "Dr. Nazri Abdullah",
+    title: "Lead Software Architect/Engineer Consultant",
+    bio: "Nazri is a highly accomplished Lead Software Architect and Full-Stack Developer with over 20 years of experience across industrial, academic, and entrepreneurial sectors. He specializes in designing and deploying production-grade microservices architectures, particularly in the Fintech, Blockchain, and Maritime industries. With a deep background in Computer Security and Backend Engineering, he has a proven track record of building scalable, secure systems for global markets including Malaysia, Sweden, Morocco, and the UAE.",
+    expertise: ["Software Architecture & System Design", "Cyber Security", "Cryptography", "DevOps & Cloud"],
+    trainings: [],
+    image: "/trainers/trainer-nazri.jpg"
+  },
+  {
+    id: "trainer-zafir",
+    name: "Zafir Eqkhmal Bin Abdul Jalil",
+    title: "MDEC Web Developer Associate",
+    bio: "Zafir Jalil is proficient in JavaScript, TypeScript, and Python, he delivers efficient solutions using frameworks like ReactJS, Laravel, and WordPress. He leads the development of large-scale systems, including a POS platform for MAIWP's Back-to-School program, generating over RM2.7 million in sales. A passionate trainer, Zafir designs and conducts HRD Corp–accredited programs, sharing his expertise in web technologies, system development, and digital solutions.",
+    expertise: ["Web Development", "Information Technology"],
+    trainings: ["ai-spm-success", "ai-at-work"],
+    image: "/trainers/trainer-zafir.jpg"
   }
 ]
 
