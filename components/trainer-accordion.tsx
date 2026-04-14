@@ -91,16 +91,16 @@ export function TrainerAccordion() {
             >
               <div className="overflow-hidden">
                 <div className="border-t border-border/40">
-                  <div className="relative aspect-video w-full overflow-hidden">
+                  <div className="relative aspect-video w-1/2 max-w-sm mx-auto mt-6 overflow-hidden rounded-xl border border-border/30 shadow-sm">
                     <Image
                       src={trainer.image}
                       alt={trainer.name}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 1024px) 90vw, 800px"
+                      sizes="(max-width: 1024px) 50vw, 400px"
                     />
                   </div>
-                  <div className="p-5">
+                  <div className="p-5 pt-6">
                     {/* Bio */}
                     <div className="mb-5">
                       <h4 className="font-medium text-xs text-muted-foreground uppercase tracking-wider mb-2">

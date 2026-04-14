@@ -127,7 +127,7 @@ export const trainers: Trainer[] = [
     bio: "Ammar Annas has over 5 years of experience in cybersecurity and trainings, having worked as a Cyber Security Engineer, Artificial Intelligence Engineer, and Cyber Security Researcher. He holds CompTia CySA+, CCEP, CCNA, ACT and ISO 27001 LI certifications and has conducted security assessments and penetration testing for organizations across Southeast Asia.",
     expertise: ["Ethical Hacking", "Security Auditing", "ISO 27001", "Penetration Testing", "Artificial Intelligence", "IoT"],
     trainings: ["cs-sme", "cs-isms", "cs-awareness", "ai-study-smart"],
-    image: "/trainers/trainer-ammar.jpg"
+    image: "/trainer-images/ammar-haziq.jpg"
   },
   {
     id: "trainer-azizul",
@@ -136,7 +136,7 @@ export const trainers: Trainer[] = [
     bio: "Azizul Nelson is an Experienced System Administrator with over 8 years of practical expertise in managing hybrid Information Technology environments, including Windows Server, Microsoft 365, and Azure. Proven ability to troubleshoot hardware and software issues, implement application security protocols, and manage enterprise authentication systems such as Active Directory and Entra ID.",
     expertise: ["Artificial Intelligence", "Law", "Information Technology"],
     trainings: ["ai-legal"],
-    image: "/trainers/trainer-azizul.jpg"
+    image: "/trainer-images/trainer-azizul.jpg"
   },
   {
     id: "trainer-nazri",
@@ -145,7 +145,7 @@ export const trainers: Trainer[] = [
     bio: "Nazri is a highly accomplished Lead Software Architect and Full-Stack Developer with over 20 years of experience across industrial, academic, and entrepreneurial sectors. He specializes in designing and deploying production-grade microservices architectures, particularly in the Fintech, Blockchain, and Maritime industries. With a deep background in Computer Security and Backend Engineering, he has a proven track record of building scalable, secure systems for global markets including Malaysia, Sweden, Morocco, and the UAE.",
     expertise: ["Software Architecture & System Design", "Cyber Security", "Cryptography", "DevOps & Cloud"],
     trainings: [],
-    image: "/trainers/trainer-nazri.jpg"
+    image: "/trainer-images/trainer-nazri.jpg"
   },
   {
     id: "trainer-zafir",
@@ -154,7 +154,7 @@ export const trainers: Trainer[] = [
     bio: "Zafir Jalil is proficient in JavaScript, TypeScript, and Python, he delivers efficient solutions using frameworks like ReactJS, Laravel, and WordPress. He leads the development of large-scale systems, including a POS platform for MAIWP's Back-to-School program, generating over RM2.7 million in sales. A passionate trainer, Zafir designs and conducts HRD Corp–accredited programs, sharing his expertise in web technologies, system development, and digital solutions.",
     expertise: ["Web Development", "Information Technology"],
     trainings: ["ai-spm-success", "ai-at-work"],
-    image: "/trainers/trainer-zafir.jpg"
+    image: "/trainer-images/trainer-zafir.jpg"
   }
 ]
 
