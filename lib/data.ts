@@ -34,7 +34,7 @@ export const trainings: Training[] = [
     description: "Essential cybersecurity awareness and protection training tailored for Small and Medium Enterprises.",
     duration: "1 day",
     trainerId: "trainer-ammar",
-    pdfUrl: "/training-posters/cs-sme.pdf",
+    pdfUrl: "/training-posters/cybersec-and-scams-training.pdf",
     objectives: ["Identify common cyber threats", "Protect SME infrastructure", "Recognize scams and phishing"],
     prerequisites: ["None"],
     targetAudience: ["SME Owners", "Employees", "Information Technology Staff"]
