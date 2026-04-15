@@ -27,15 +27,14 @@ const values = [
 
 
 const milestones = [
-  { year: "2020", event: "Company established with a vision to transform professional training" },
+  { year: "2020", event: "Company established with providing Newtork Security solutions" },
   { year: "2024", event: "Company officially registered under SSM" },
-  { year: "2025", event: "Achieved status as an HRDCorp registered training provider" },
-  { year: "2026", event: "Became an official PECB training provider for ISO certifications" },
+  { year: "2025", event: "Achieved status as an HRDCorp registered training provider\nRelocated office to Plaza Azalea, Shah Alam, Selangor." },
+  { year: "2026", event: "Achieved official registration with the Ministry of Finance (MoF) Malaysia\nInducted as an official member of the Malaysia Association of Training Providers (MATPRO)" },
 ]
 
 const certifications = [
   "HRDCorp Registered Training Provider",
-  "Certified PCEB Training Provider",
   "Certified Accredited HRDCorp Trainer",
   "Certified CyberSecurity Educator Professional",
   "Malaysian Association for Training Providers (MATPRO) member"
@@ -69,7 +68,7 @@ export default function AboutPage() {
               Redefine Professional Development With Tech Education
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Since 2020, IIA Technology has been at the forefront of professional training 
+              Since 2024, IIA Technology has been at the forefront of professional training 
               in Malaysia. We help organizations and individuals achieve their goals 
               through exceptional training programs.
             </p>
@@ -222,7 +221,7 @@ export default function AboutPage() {
                   <div className={`flex-1 ml-12 lg:ml-0 ${index % 2 === 0 ? "lg:text-right" : "lg:text-left"}`}>
                     <div className="bg-card border border-border/50 rounded-xl p-5 inline-block shadow-sm shadow-black/[0.01]">
                       <span className="text-xl font-semibold text-foreground">{milestone.year}</span>
-                      <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{milestone.event}</p>
+                      <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed whitespace-pre-line">{milestone.event}</p>
                     </div>
                   </div>
                   

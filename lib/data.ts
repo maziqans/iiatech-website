@@ -124,9 +124,9 @@ export const trainers: Trainer[] = [
     id: "trainer-ammar",
     name: "Ammar Haziq Bin Annas",
     title: "Cyber Security Consultant",
-    bio: "Ammar Annas has over 5 years of experience in cybersecurity and trainings, having worked as a Cyber Security Engineer, Artificial Intelligence Engineer, and Cyber Security Researcher. He holds CompTia CySA+, CCEP, CCNA, ACT and ISO 27001 LI certifications and has conducted security assessments and penetration testing for organizations across Southeast Asia.",
+    bio: "Ammar Annas has over 4 years of experience in cybersecurity and trainings, having worked as a Cyber Security Engineer, Artificial Intelligence Engineer, and Cyber Security Researcher. He holds CompTia CySA+, CCEP, CCNA, ACT and ISO 27001 LI certifications and has conducted security assessments and penetration testing for organizations across Southeast Asia.",
     expertise: ["Ethical Hacking", "Security Auditing", "ISO 27001", "Penetration Testing", "Artificial Intelligence", "IoT"],
-    trainings: ["cs-sme", "cs-isms", "cs-awareness", "ai-study-smart"],
+    trainings: ["cs-sme", "cs-awareness", "ai-study-smart"],
     image: "/trainer-images/ammar-haziq.jpg"
   },
   {
