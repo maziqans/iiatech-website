@@ -66,7 +66,7 @@ export default function Home() {
       {/* Hero Section */}
       <ScrollReveal>
       <section className="relative min-h-[90vh] flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-muted/20 via-background to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-muted/20 via-background to-background dark:bg-gradient-to-b dark:from-background/80 dark:via-background/20 dark:to-transparent" />
         
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
