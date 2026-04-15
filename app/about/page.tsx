@@ -51,19 +51,19 @@ export default function AboutPage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted/60 border border-border/40 text-muted-foreground text-sm mb-6">
+                <Building2 className="h-3.5 w-3.5" />
+                About IIA Technology
+              </div>
               <div className="mb-6">
                 <Image 
-                  src="/trainer-images/iia-logo_page-0001.jpg" 
+                  src="/trainer-images/iia-logo.png" 
                   alt="IIA Technology Logo" 
                   width={150} 
                   height={150} 
                   className="h-24 w-auto object-contain rounded-md"
                   priority
                 />
-              </div>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted/60 border border-border/40 text-muted-foreground text-sm mb-6">
-                <Building2 className="h-3.5 w-3.5" />
-                About IIA Technology
               </div>
             <h1 className="text-4xl sm:text-5xl font-semibold text-foreground mb-6 leading-tight tracking-tight text-balance">
               Redefine Professional Development With Tech Education
