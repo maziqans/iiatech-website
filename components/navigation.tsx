@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useRef, useEffect, useCallback } from "react"
-import { ChevronDown, Menu, X } from "lucide-react"
+import { ChevronDown, Menu, X, Sun, Moon } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
@@ -16,6 +16,7 @@ const trainingCategories = [
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [trainingDropdownOpen, setTrainingDropdownOpen] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
@@ -57,6 +58,24 @@ export function Navigation() {
 
   const handleDropdownLeave = () => {
     scheduleClose()
+  }
+
+  // Check system preference or saved theme on load
+  useEffect(() => {
+    if (
+      document.documentElement.classList.contains("dark") ||
+      (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      setIsDarkMode(true)
+      document.documentElement.classList.add("dark")
+    }
+  }, [])
+
+  const toggleTheme = () => {
+    const newTheme = !isDarkMode
+    setIsDarkMode(newTheme)
+    document.documentElement.classList.toggle("dark", newTheme)
+    localStorage.setItem("theme", newTheme ? "dark" : "light")
   }
 
   return (
@@ -155,24 +174,40 @@ export function Navigation() {
           </div>
 
           {/* CTA Button - Neutral styling */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="p-2 text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-full transition-colors"
+              aria-label="Toggle theme"
+            >
+              {isDarkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            </button>
             <Button asChild size="sm" variant="outline" className="shadow-none border-border hover:bg-muted">
               <Link href="/contact">Get Started</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 hover:bg-muted/50 rounded-lg transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
-          </button>
+          <div className="flex items-center gap-1 md:hidden">
+            <button
+              onClick={toggleTheme}
+              className="p-2 text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-full transition-colors"
+              aria-label="Toggle theme"
+            >
+              {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </button>
+            <button
+              className="p-2 hover:bg-muted/50 rounded-lg transition-colors"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
