@@ -9,21 +9,18 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 const trainingCategories = [
   {
     title: "Cyber Security",
-    description: "Protect your organization with highly recognized security training programs.",
     icon: Shield,
     href: "/training/cyber-security",
     bgImage: "/images/cybersec-back.jpg",
   },
   {
     title: "Information Technology",
-    description: "Master cloud computing, DevOps, and enterprise Information Technology infrastructure.",
     icon: Monitor,
     href: "/training/it",
     bgImage: "/images/it-back.jpg",
   },
   {
     title: "General",
-    description: "Essential business skills including project management and analysis.",
     icon: Briefcase,
     href: "/training/general",
     bgImage: "/images/business-back.jpg",
@@ -148,7 +145,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {trainingCategories.map((category) => (
               <Link key={category.title} href={category.href} className="group">
-                <Card className="relative h-full overflow-hidden border-border/50 hover:border-border/80 hover:shadow-md transition-all duration-300 bg-card min-h-[320px] flex flex-col">
+                <Card className="relative h-full overflow-hidden border-border/50 hover:border-border/80 hover:shadow-md transition-all duration-300 bg-card min-h-[260px] flex flex-col">
                   <div 
                     className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"
                     style={{ backgroundImage: `url('${category.bgImage}')` }}
@@ -156,14 +153,11 @@ export default function Home() {
                   <div className="absolute inset-0 bg-background/95 group-hover:bg-black/75 transition-colors duration-500 z-0" />
                   
                   <div className="relative z-10 flex flex-col h-full">
-                    <CardHeader className="pb-3 flex-grow">
+                    <CardHeader className="pb-4 flex-grow">
                       <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-muted/60 mb-6 group-hover:bg-white/20 transition-colors">
                         <category.icon className="h-6 w-6 text-foreground/70 group-hover:text-white transition-colors" />
                       </div>
                       <CardTitle className="text-xl font-medium group-hover:text-white transition-colors">{category.title}</CardTitle>
-                      <CardDescription className="text-muted-foreground leading-relaxed group-hover:text-gray-200 transition-colors">
-                        {category.description}
-                      </CardDescription>
                     </CardHeader>
                     <CardContent className="mt-auto pt-4">
                       <div className="inline-flex items-center text-sm font-medium text-muted-foreground group-hover:text-white transition-colors">
