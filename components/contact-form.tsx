@@ -92,7 +92,6 @@ export function ContactForm() {
             <Input
               id="firstName"
               name="firstName"
-              placeholder="John"
               required
             />
           </Field>
@@ -101,7 +100,6 @@ export function ContactForm() {
             <Input
               id="lastName"
               name="lastName"
-              placeholder="Doe"
               required
             />
           </Field>
@@ -113,7 +111,6 @@ export function ContactForm() {
             id="email"
             name="email"
             type="email"
-            placeholder="john@company.com"
             required
           />
         </Field>
@@ -124,7 +121,6 @@ export function ContactForm() {
             id="phone"
             name="phone"
             type="tel"
-            placeholder="+60 12-345 6789"
           />
         </Field>
 
@@ -133,7 +129,6 @@ export function ContactForm() {
           <Input
             id="company"
             name="company"
-            placeholder="Your Company Sdn Bhd"
           />
         </Field>
 
