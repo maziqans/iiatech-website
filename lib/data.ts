@@ -117,6 +117,32 @@ export const trainings: Training[] = [
     prerequisites: ["None"],
     targetAudience: ["SPM Students", "High School Students"]
   },
+  {
+    id: "gen-esg",
+    slug: "esg-awareness",
+    title: "ESG Awareness",
+    category: "general",
+    description: "Comprehensive awareness training on Environmental, Social, and Governance (ESG) principles and implementation.",
+    duration: "1 day",
+    trainerId: "trainer-nazri",
+    pdfUrl: "/training-posters/esg-awareness.pdf",
+    objectives: ["Understand ESG principles", "Implement ESG frameworks", "Improve corporate sustainability"],
+    prerequisites: ["None"],
+    targetAudience: ["Corporate Leaders", "Managers", "All Employees"]
+  },
+  {
+    id: "gen-abms",
+    slug: "iso37001-abms",
+    title: "ISO 37001: Anti-Bribery Management System (ABMS)",
+    category: "general",
+    description: "Learn the requirements and guidelines for establishing, implementing, maintaining, and improving an anti-bribery management system.",
+    duration: "2 days",
+    trainerId: "trainer-nazri",
+    pdfUrl: "/training-posters/iso37001-abms.pdf",
+    objectives: ["Understand ISO 37001 requirements", "Implement ABMS", "Mitigate bribery risks"],
+    prerequisites: ["None"],
+    targetAudience: ["Compliance Officers", "Management", "Auditors"]
+  },
 ]
 
 export const trainers: Trainer[] = [
@@ -144,8 +170,8 @@ export const trainers: Trainer[] = [
     title: "Lead Software Architect/Engineer Consultant",
     bio: "Nazri is a highly accomplished Lead Software Architect and Full-Stack Developer with over 20 years of experience across industrial, academic, and entrepreneurial sectors. He specializes in designing and deploying production-grade microservices architectures, particularly in the Fintech, Blockchain, and Maritime industries. With a deep background in Computer Security and Backend Engineering, he has a proven track record of building scalable, secure systems for global markets including Malaysia, Sweden, Morocco, and the UAE.",
     expertise: ["Software Architecture & System Design", "Cyber Security", "Cryptography", "DevOps & Cloud"],
-    trainings: [],
-    image: "/trainer-images/trainer-nazri.jpg"
+    trainings: ["gen-esg", "gen-abms"],
+    image: "/trainer-images/nazri-abd.png"
   },
   {
     id: "trainer-zafir",
@@ -154,7 +180,7 @@ export const trainers: Trainer[] = [
     bio: "Zafir Jalil is proficient in JavaScript, TypeScript, and Python, he delivers efficient solutions using frameworks like ReactJS, Laravel, and WordPress. He leads the development of large-scale systems, including a POS platform for MAIWP's Back-to-School program, generating over RM2.7 million in sales. A passionate trainer, Zafir designs and conducts HRD Corp–accredited programs, sharing his expertise in web technologies, system development, and digital solutions.",
     expertise: ["Web Development", "Information Technology"],
     trainings: ["ai-spm-success", "ai-at-work"],
-    image: "/trainer-images/trainer-zafir.jpg"
+    image: "/trainer-images/zafir-jalil.jpeg"
   }
 ]
 

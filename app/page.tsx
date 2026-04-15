@@ -52,8 +52,8 @@ const features = [
 
 const stats = [
   { numericValue: 200, suffix: "+", label: "Professionals Trained" },
-  { numericValue: 15, suffix: "", label: "Training Programs" },
-  { numericValue: 5, suffix: "", label: "Expert Consultants" },
+  { numericValue: 8, suffix: "", label: "Training Programs" },
+  { numericValue: 6, suffix: "", label: "Expert Consultants" },
   { numericValue: 3, suffix: "", label: "Years Experience" },
 ]
 
