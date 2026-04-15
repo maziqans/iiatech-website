@@ -145,9 +145,9 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {trainingCategories.map((category) => (
               <Link key={category.title} href={category.href} className="group">
-                <Card className="relative h-full overflow-hidden border-border/50 hover:border-border/80 hover:shadow-md transition-all duration-300 bg-card min-h-[260px] flex flex-col">
+                <Card className="relative h-full overflow-hidden border-border/50 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/20 dark:hover:shadow-primary/40 hover:-translate-y-1.5 transition-all duration-500 bg-card min-h-[260px] flex flex-col">
                   <div 
-                    className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"
+                    className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 z-0"
                     style={{ backgroundImage: `url('${category.bgImage}')` }}
                   />
                   <div className="absolute inset-0 bg-background/95 group-hover:bg-black/75 transition-colors duration-500 z-0" />

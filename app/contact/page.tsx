@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Mail, Phone, MapPin } from "lucide-react"
 import { ContactForm } from "@/components/contact-form"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 export const metadata: Metadata = {
   title: "Contact Us | IIA Technology",
@@ -11,6 +12,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Header - Neutral white/grey styling */}
+      <ScrollReveal>
       <section className="bg-muted/30 border-b border-border/40 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-semibold text-foreground mb-4 tracking-tight">Contact Us</h1>
@@ -20,8 +22,10 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Contact Section */}
+      <ScrollReveal>
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
@@ -87,6 +91,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
     </div>
   )
 }

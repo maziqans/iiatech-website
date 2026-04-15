@@ -2,6 +2,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArrowLeft, Clock, User, FileText } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { ScrollReveal } from "@/components/scroll-reveal"
 import { Badge } from "@/components/ui/badge"
 import { 
   getTrainingsByCategory, 
@@ -50,6 +51,7 @@ export default async function TrainingCategoryPage({ params }: PageProps) {
   return (
     <div className="min-h-screen">
       {/* Header - Neutral white/grey styling */}
+      <ScrollReveal>
       <section className="bg-muted/30 border-b border-border/40 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Link
@@ -66,8 +68,10 @@ export default async function TrainingCategoryPage({ params }: PageProps) {
           </p>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Training List */}
+      <ScrollReveal>
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-6">
@@ -129,8 +133,10 @@ export default async function TrainingCategoryPage({ params }: PageProps) {
           )}
         </div>
       </section>
+      </ScrollReveal>
 
       {/* CTA Section - Neutral styling */}
+      <ScrollReveal>
       <section className="py-16 bg-muted/20 border-t border-border/40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-semibold text-foreground mb-4 tracking-tight">
@@ -148,6 +154,7 @@ export default async function TrainingCategoryPage({ params }: PageProps) {
           </Link>
         </div>
       </section>
+      </ScrollReveal>
     </div>
   )
 }

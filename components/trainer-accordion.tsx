@@ -137,7 +137,7 @@ export function TrainerAccordion() {
                               href={training.pdfUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="group flex items-center justify-between p-3.5 bg-muted/40 hover:bg-muted/70 rounded-lg transition-colors"
+                              className="group flex items-center justify-between p-3.5 bg-muted/40 hover:bg-muted/60 border border-transparent hover:border-primary/20 hover:shadow-md hover:shadow-primary/10 dark:hover:shadow-primary/25 hover:-translate-y-0.5 rounded-lg transition-all duration-300"
                             >
                               <div className="flex-1 min-w-0">
                                 <p className="font-medium text-sm text-foreground group-hover:text-primary transition-colors">
@@ -153,7 +153,7 @@ export function TrainerAccordion() {
                                     training.category as TrainingCategory
                                   ]}
                                 </Badge>
-                                <FileText className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                                <FileText className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:scale-110 transition-all duration-300" />
                               </div>
                             </a>
                           )
