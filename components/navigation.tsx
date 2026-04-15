@@ -60,14 +60,14 @@ export function Navigation() {
     scheduleClose()
   }
 
-  // Check system preference or saved theme on load
+  // Check saved theme on load, default to light for new users
   useEffect(() => {
-    if (
-      document.documentElement.classList.contains("dark") ||
-      (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
+    if (localStorage.getItem("theme") === "dark") {
       setIsDarkMode(true)
       document.documentElement.classList.add("dark")
+    } else {
+      setIsDarkMode(false)
+      document.documentElement.classList.remove("dark")
     }
   }, [])
 
