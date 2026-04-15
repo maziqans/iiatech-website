@@ -39,7 +39,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <p className="text-sm text-muted-foreground">aida@iiatech.com.my</p>
+                    <p className="text-sm text-muted-foreground">admin@iiatech.com.my</p>
                   </div>
                 </div>
 

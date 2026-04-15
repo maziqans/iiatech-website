@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { useState, useRef, useEffect, useCallback } from "react"
 import { ChevronDown, Menu, X } from "lucide-react"
@@ -64,6 +65,13 @@ export function Navigation() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
+            <Image 
+              src="/trainer-images/iia-logo.png" 
+              alt="IIA Technology Logo" 
+              width={32} 
+              height={32} 
+              className="h-8 w-auto object-contain rounded-sm"
+            />
             <span className="text-lg font-medium text-foreground tracking-tight">
               IIA Technology
             </span>

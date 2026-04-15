@@ -59,8 +59,8 @@ export default function AboutPage() {
                 <Image 
                   src="/trainer-images/iia-logo.png" 
                   alt="IIA Technology Logo" 
-                  width={150} 
-                  height={150} 
+                  width={200} 
+                  height={200} 
                   className="h-24 w-auto object-contain rounded-md"
                   priority
                 />

@@ -24,11 +24,30 @@ export function ContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    const formData = new FormData(e.currentTarget)
+    // Replace the string below with your actual Web3Forms access key
+    formData.append("access_key", "97e97a70-f728-4b89-9890-3bde382e1931")
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        setIsSubmitted(true)
+      } else {
+        console.error("Form submission failed", data)
+        alert("Something went wrong. Please try again.")
+      }
+    } catch (error) {
+      console.error("Error submitting form", error)
+      alert("Something went wrong. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
