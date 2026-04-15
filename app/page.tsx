@@ -73,7 +73,7 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-6 mb-6">
                 <Image src="/images/hrdc-claim.webp" alt="HRDCorp Claimable" width={240} height={120} className="object-contain h-20 w-auto" priority />
-                <Image src="/images/hrdc-tp.png" alt="HRDCorp Training Provider" width={240} height={120} className="object-contain h-20 w-auto" priority />
+                <Image src="/images/hrdc-tp.webp" alt="HRDCorp Training Provider" width={240} height={120} className="object-contain h-20 w-auto" priority />
               </div>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted/60 border border-border/40 text-muted-foreground text-sm mb-6">
                 <Award className="h-3.5 w-3.5" />
