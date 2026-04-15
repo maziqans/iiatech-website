@@ -146,14 +146,24 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Subtle tech grid pattern for light mode */
+    background-image: 
+      linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 2rem 2rem;
+    background-attachment: fixed;
   }
   html {
     scroll-behavior: smooth;
   }
   
-  /* Shibuya Sunset Dark Mode Global Styles */
+  /* Shibuya Sunset Dark Mode Global Styles with Tech Grid */
   .dark body {
-    background: linear-gradient(to bottom, hsl(260 40% 8%) 0%, hsl(270 30% 12%) 40%, hsl(340 40% 15%) 70%, hsl(20 60% 18%) 100%);
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(260 40% 8%) 0%, hsl(270 30% 12%) 40%, hsl(340 40% 15%) 70%, hsl(20 60% 18%) 100%);
+    background-size: 2rem 2rem, 2rem 2rem, 100% 100%;
     background-attachment: fixed;
   }
   

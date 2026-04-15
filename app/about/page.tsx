@@ -265,7 +265,18 @@ export default function AboutPage() {
             </div>
             
             <div className="bg-muted/40 border border-border/50 rounded-2xl p-8">
-              <Award className="h-12 w-12 mb-5 text-foreground/40" />
+              <div className="flex items-center gap-4 mb-6">
+                <Image src="/images/hrdc-claim.webp" 
+                  alt="HRDCorp Claimable" 
+                  width={80} 
+                  height={80} 
+                  className="object-contain h-16 w-16" />
+                <Image src="/images/hrdc-tp.png" 
+                  alt="HRDCorp Training Provider" 
+                  width={80} 
+                  height={80} 
+                  className="object-contain h-16 w-16" />
+              </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">HRDCorp Registered</h3>
               <p className="text-muted-foreground leading-relaxed mb-6 text-sm">
                 As a registered HRDCorp training provider, all our programs are fully 
