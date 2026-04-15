@@ -95,7 +95,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-lg shadow-black/[0.03] border border-border/40">
                 <Image
-                  src="/images/about-team.jpg"
+                  src="/images/selfie-team.jpg"
                   alt="IIA Technology team"
                   fill
                   className="object-cover"
