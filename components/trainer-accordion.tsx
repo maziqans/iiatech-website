@@ -60,16 +60,12 @@ export function TrainerAccordion() {
                     isOpen && "opacity-0"
                   )}
                 >
-                  {trainer.id === 'trainer-ammar' ? (
-                    <Image
-                      src={trainer.image}
-                      alt={trainer.name}
-                      fill
-                      className="object-cover"
-                    />
-                  ) : (
-                    <User className="h-5 w-5 text-muted-foreground" />
-                  )}
+                  <Image
+                    src={trainer.image}
+                    alt={trainer.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <h3 className="font-medium text-foreground">
@@ -96,17 +92,13 @@ export function TrainerAccordion() {
               <div className="overflow-hidden">
                 <div className="border-t border-border/40 flex flex-col sm:flex-row gap-6 p-5 pt-6 items-start">
                   <div className="relative aspect-[3/4] w-48 shrink-0 overflow-hidden rounded-xl border border-border/30 shadow-sm bg-muted flex items-center justify-center">
-                    {trainer.id === 'trainer-ammar' ? (
-                      <Image
-                        src={trainer.image}
-                        alt={trainer.name}
-                        fill
-                        className="object-cover"
-                        sizes="192px"
-                      />
-                    ) : (
-                      <User className="h-16 w-16 text-muted-foreground/50" />
-                    )}
+                    <Image
+                      src={trainer.image}
+                      alt={trainer.name}
+                      fill
+                      className="object-cover"
+                      sizes="192px"
+                    />
                   </div>
                   <div className="flex-1 min-w-0">
                     {/* Bio */}

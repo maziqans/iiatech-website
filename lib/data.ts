@@ -40,19 +40,6 @@ export const trainings: Training[] = [
     targetAudience: ["SME Owners", "Employees", "Information Technology Staff"]
   },
   {
-    id: "cs-isms",
-    slug: "iso27001-isms",
-    title: "ISO27001 (ISMS)",
-    category: "cyber-security",
-    description: "In-depth training on implementing and managing an Information Security Management System (ISMS) based on ISO 27001.",
-    duration: "1 day",
-    trainerId: "trainer-ammar",
-    pdfUrl: "/training-posters/iso27001.pdf",
-    objectives: ["Understand ISO 27001 framework", "Implement ISMS", "Conduct risk assessments"],
-    prerequisites: ["Basic Information Technology knowledge"],
-    targetAudience: ["Information Technology Managers", "Security Officers", "Compliance Professionals"]
-  },
-  {
     id: "cs-awareness",
     slug: "information-security-awareness",
     title: "Information Security Awareness",
