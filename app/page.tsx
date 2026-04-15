@@ -102,7 +102,7 @@ export default function Home() {
             <div className="relative hidden lg:block">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-xl shadow-black/[0.03] border border-border/40">
                 <Image
-                  src="/images/hero-train.png"
+                  src="/images/hero-train.jpeg"
                   alt="Professional training environment"
                   fill
                   className="object-cover"
