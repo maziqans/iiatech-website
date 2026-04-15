@@ -80,8 +80,7 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-card border border-border/50 rounded-lg p-6 sm:p-8 shadow-sm shadow-black/[0.02]">
-                <h2 className="text-2xl font-semibold text-foreground mb-6 tracking-tight">Send us a Message</h2>
+              <div className="bg-card border border-border/50 rounded-lg p-6 sm:p-8 shadow-sm shadow-black/[0.02] pt-6 sm:pt-6">
                 <ContactForm />
               </div>
             </div>
