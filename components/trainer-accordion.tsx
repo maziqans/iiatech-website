@@ -103,7 +103,7 @@ export function TrainerAccordion() {
                       <h4 className="font-medium text-xs text-muted-foreground uppercase tracking-wider mb-2">
                         Biography
                       </h4>
-                      <p className="text-foreground/90 leading-relaxed text-sm">{trainer.bio}</p>
+                      <p className="text-foreground/90 leading-relaxed text-sm whitespace-pre-line">{trainer.bio}</p>
                     </div>
 
                     {/* Expertise */}
