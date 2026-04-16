@@ -66,7 +66,10 @@ export default async function TrainingCategoryPage({ params }: PageProps) {
             {trainings.map((training) => {
               
               return (
-                <Card key={training.id} id={training.id} className="group hover:shadow-md transition-shadow border-border/50 scroll-mt-24">
+                <Card key={training.id} id={training.id} className="relative group hover:shadow-md transition-shadow border-border/50 scroll-mt-24 flex flex-col overflow-hidden">
+                  <Link href={`/training-details?id=${training.id}`} className="absolute inset-0 z-10">
+                    <span className="sr-only">View details for {training.title}</span>
+                  </Link>
                   <CardHeader>
                     <div className="flex items-start justify-between gap-4">
                       <div>
@@ -89,7 +92,7 @@ export default async function TrainingCategoryPage({ params }: PageProps) {
                       href={training.pdfUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-md border border-border bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-muted hover:text-foreground w-full sm:w-auto"
+                      className="relative z-20 inline-flex items-center justify-center rounded-md border border-border bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-muted hover:text-foreground w-full sm:w-auto"
                     >
                       <FileText className="mr-2 h-4 w-4" />
                       View Brochure
