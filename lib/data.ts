@@ -136,7 +136,7 @@ export const trainers: Trainer[] = [
   {
     id: "trainer-ammar",
     name: "Ammar Haziq Bin Annas",
-    title: "Cyber Security Consultant",
+    title: "Cyber Security Consultant, CEO of IIA Technology",
     bio: "Ammar Haziq holds a First Class Honours Degree in Computer Science (Network and Security) from the International Islamic University Malaysia (IIUM) and is a certified CompTIA Cybersecurity Analyst (CySA+) and ISO 27001 - Information Security Management System Lead Implementer. He is the Chief Technology Officer of Infinicore Sdn. Bhd., a NACSA-licensed cybersecurity firm, where he manages the organization’s strategic and technical trajectory. Additionally, he serves as the Founder and CEO of IIA Technology, positioning himself at the forefront of both specialized cybersecurity services and professional technical education.\n\nA recognized Cybersecurity Engineer and Researcher, Ammar has authored numerous research journals published in esteemed platforms such as IEEE, MJSAT, and IJPCC, and is a frequent speaker at various industry conferences. He is also an accredited HRD Corp trainer (ACT) and a Certified Cybersecurity Educator Professional (CCEP) with a background in advanced infrastructure hardening and penetration testing. Known for his technical mastery and leadership, Ammar is a dynamic figure dedicated to advancing the cybersecurity landscape and fostering a culture of digital resilience in Malaysia.",
     expertise: ["Ethical Hacking", "Security Auditing", "ISO 27001", "Penetration Testing", "Artificial Intelligence", "IoT"],
     trainings: ["cs-sme", "cs-awareness", "ai-study-smart"],
@@ -154,7 +154,7 @@ export const trainers: Trainer[] = [
   {
     id: "trainer-nazri",
     name: "Dr. Nazri Abdullah",
-    title: "Lead Software Architect/Engineer Consultant",
+    title: "Lead Software Architect|Engineer Consultant",
     bio: "Dr. Nazri Abdullah is a highly accomplished Lead Software Architect and Engineer with a career spanning over two decades in information security, fintech, and backend development. He holds a Master’s in Computer Science from the Malaysia University of Technology and is a PhD candidate at the KTH Royal Institute of Technology, where his research focuses on using blockchain technology to enhance security in distributed big data. Nazri is also a recognized innovator, having successfully filed multiple patents in the United States and internationally related to blockchain identity management and micro-kernel architecture.\n\nCurrently serving as a Consultant Lead Software Architect and DevOps Engineer, Nazri has led the design and deployment of sophisticated platforms, including the LibertyPay salary advance system in Morocco and the AnchorWorx maritime marketplace in Malaysia. His extensive experience includes senior roles at international firms such as Nordark AB and Tink AB in Sweden, where he engineered scalable microservices architectures and integrated complex open banking financial data services.\n\nIn addition to his corporate and consulting work, Nazri has a strong academic background, having served as a Senior Lecturer and Head of the Information Security Department at Universiti Tun Hussein Onn. A Swedish Permanent Resident and Malaysian Citizen, he is fluent in English and Malay. He is recognized for his deep expertise in Go, Java, and cryptography, as well as his leadership in implementing robust CI/CD pipelines and observability stacks for high-availability production environments.",
     expertise: ["Software Architecture & System Design", "Cyber Security", "Cryptography", "DevOps & Cloud"],
     trainings: ["gen-esg", "gen-abms"],
@@ -172,7 +172,7 @@ export const trainers: Trainer[] = [
   {
     id: "trainer-annas",
     name: "Annas Bin Ahmad",
-    title: "ESG, Business & Law Consultant",
+    title: "Business & Law Consultant",
     bio: "Annas Ahmad holds an Honours Degree in Law from Universiti Kebangsaan Malaysia and was admitted to the Malaysian Bar in 1997. He is the Group Executive Chairman of My-Sutera Group of Companies, producer of the well-known “Canggih” school uniform brand, which has earned national awards for excellence. His past roles include Group Managing Director of Intraxius Group and CEO/Executive Director of Prime Utilities Berhad, a Bursa Malaysia–listed company, following his early career in corporate and banking law.\n\nAppointed Adjunct Professor at Management Science University, Annas has extensive experience across law, property, utilities, textiles, and food industries. He is recognized for his integrity, leadership, and commitment to excellence, making him a respected and approachable figure in Malaysia’s corporate sector.",
     expertise: ["ESG", "Business", "Law"],
     trainings: [],
