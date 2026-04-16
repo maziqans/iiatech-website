@@ -81,7 +81,26 @@ export const trainings: Training[] = [
     duration: "1 day",
     trainerId: "trainer-azizul",
     pdfUrl: "/training-posters/ai-legal.pdf",
-    objectives: ["Understand Artificial Intelligence in legal context", "Automate document review", "Enhance legal research"],
+    objectives: [
+      "Understand how AI transforms conveyancing workflows, including contract drafting, clause detection, and risk flagging.",
+      "Apply AI tools to review sale & purchase agreements, tenancy contracts, and land title transfers with improved accuracy and efficiency.",
+      "Evaluate AI-generated contract summaries against manual analysis to assess reliability and utility.",
+      "Develop responsible AI practices by addressing ethics, confidentiality, and data governance in client engagements.",
+      "Design effective prompts tailored to legal roles and jurisdictions to enhance AI outputs in property matters.",
+      "Conduct AI-driven risk assessments using clause scoring and Likelihood × Impact matrices to prepare structured compliance reports."
+    ],
+    overview: "The core objective is to move beyond manual, time-intensive processes, such as reviewing tenancy agreements and sales-purchase agreements (SPA), by leveraging AI tools like ChatGPT and Copilot. The material outlines how AI can be used for clause-by-clause risk scoring, automated contract summarization, and ensuring compliance with statutory requirements. It emphasizes a shift toward \"Responsible AI Use,\" where legal practitioners act as supervisors to enhance efficiency while managing ethical risks, data privacy, and jurisdictional accuracy. Ultimately, the topic presents a roadmap for legal professionals to transition from traditional information retrieval to high-level strategic advisory roles by adopting AI-driven risk assessment and reporting methodologies.",
+    modules: [
+      "Module 1: Introduction to AI in Conveyancing",
+      "Module 2: AI in Contract Review & Property Transactions",
+      "Module 3: Key AI Tools for Conveyancing",
+      "Module 4: Responsible AI in Conveyancing Practice",
+      "Module 5: Prompt Engineering for Legal Workflows",
+      "Module 6: AI for Legal Research & Analysis",
+      "Module 7: AI for Risk Assessment & Reporting",
+      "Module 8: Practical Applications & Case Studies",
+      "Module 9: Microsoft Copilot & Productivity Integration"
+    ],
     prerequisites: ["Basic understanding of legal processes"],
     targetAudience: ["Lawyers", "Legal Assistants", "Paralegals", "Law Firm Managers"]
   },
