@@ -152,10 +152,30 @@ export const trainings: Training[] = [
     title: "AI Study Smart: AI-Powered Learning Skills for SPM Students & Beyond",
     category: "it",
     description: "Discover AI-powered learning skills and techniques to excel in SPM and further education.",
-    duration: "1 day",
+    duration: "2 days",
     trainerId: "trainer-ammar",
     pdfUrl: "/training-posters/ai-study-smart.pdf",
-    objectives: ["Leverage AI for learning", "Develop smart study techniques", "Future-proof skills"],
+    objectives: [
+      "Explain what Generative AI is, how it works, and where it has limitations.",
+      "Apply responsible and ethical AI practices including data privacy, academic integrity, and fact-verification.",
+      "Write effective prompts that produce accurate, subject-specific explanations from AI tools.",
+      "Use AI as a personal tutor to understand difficult concepts across any SPM subject.",
+      "Draft, structure, and improve written essays in Bahasa Malaysia and English using AI feedback.",
+      "Conduct research and verify information using AI tools, avoiding plagiarism and misinformation.",
+      "Generate custom practice questions, mock tests, and revision summaries for SPM preparation.",
+      "Build and maintain a personal AI study system including a prompt library and subject-specific workflows."
+    ],
+    overview: "Most students already use AI — but almost none have been taught how to use it well. They copy, paste, and hope for the best. Then they wonder why the output sounds nothing like them, fails to answer the question, or gets them in trouble with their teacher.\n\nAI Study Smart is a two-day, hands-on learning programme designed specifically for Form 4 and Form 5 students preparing for the Sijil Pelajaran Malaysia (SPM) examination. It is not a talk on what AI is — it is a practical bootcamp on how to use AI as a powerful, ethical, and personal study partner. By the end of two days, every student will have used AI to tackle real subjects from their own school syllabus, improved an actual essay they are working on, generated their own SPM practice questions, and built a personal AI study system they can use from that day forward.",
+    modules: [
+      "Module 1: AI & You — Myths, Ethics & Responsible Use",
+      "Module 2: AI as Your Personal Tutor — Understanding Any Subject",
+      "Module 3: The Prompting Skill — Ask Better, Get Better Answers",
+      "Module 4: AI for Tough Subjects — Live Study Session",
+      "Module 5: AI for Essay Writing — BM & English",
+      "Module 6: AI for Research, Projects & Fact-Checking",
+      "Module 7: AI-Powered Exam Preparation",
+      "Module 8: My Personal AI Study System — Action Plan & Graduation"
+    ],
     prerequisites: ["None"],
     targetAudience: ["SPM Students", "High School Students"]
   },
@@ -168,7 +188,21 @@ export const trainings: Training[] = [
     duration: "2 days",
     trainerId: "trainer-nazri",
     pdfUrl: "/training-posters/esg-awareness.pdf",
-    objectives: ["Understand ESG principles", "Implement ESG frameworks", "Improve corporate sustainability"],
+    objectives: [
+      "Introduction to Sustainability & RMK12",
+      "Introduction to Carbon Family",
+      "Introduction on Sustainability reporting based on GRI Standard",
+      "Sustainability Journey for SME"
+    ],
+    overview: "This course is designed to give a practical approach through a combination of theory, case study and workshop will be used to ensure the participants’ involvement and interest.",
+    modules: [
+      "Module 1: Introduction to Sustainability",
+      "Module 2: RMK12- Malaysian Government Direction in Sustainability",
+      "Module 3: Definition of Carbon & Family",
+      "Module 4: ESG, SDG17, COP",
+      "Module 5: Sustainability Journey for Organization Standards- Global Reporting Initiative (GRI)",
+      "Module 6: Sustainability Journey for SME"
+    ],
     prerequisites: ["None"],
     targetAudience: ["Corporate Leaders", "Managers", "All Employees"]
   },
@@ -181,7 +215,23 @@ export const trainings: Training[] = [
     duration: "2 days",
     trainerId: "trainer-nazri",
     pdfUrl: "/training-posters/iso37001-abms.pdf",
-    objectives: ["Understand ISO 37001 requirements", "Implement ABMS", "Mitigate bribery risks"],
+    objectives: [
+      "Enable participants to understand how corruption may impact their company, what corporate liability for corruption offences means and what constitute the effective measures required by the Government.",
+      "Equip small enterprises with a for the next steps that they need to prepare for their anti-corruption programme to help protect the organisation, managers and directors against corporate liability arising from a corruption incident.",
+      "Explain the fundamental concepts and principles of an anti-bribery management system (ABMS) based on ISO 37001.",
+      "Understand ISO 37001:2016 requirements and how to implement it effectively"
+    ],
+    overview: "ISO 37001:2016 is Anti-Bribery Management System (ABMS) which implemented by organization in order to have a total system in order to mitigate the bribery issues. It is more than Adequate Procedures can offer. Then those companies who have government project, by 2021, they need to be certified ISO 37001.",
+    modules: [
+      "Module 1: Introduction to management system and the process approach",
+      "Module 2: Normative frameworks and methodologies related to anti-bribery",
+      "Module 3: Fundamental principles of anti-bribery Understand 'context organization'",
+      "Module 4: Clause 4: Context of Organization Clause 5: Leadership and Commitment",
+      "Module 5: Clause 6: Planning Clause 7: Support",
+      "Module 6: Clause 8: Operation Clause 9: Performance Evaluation",
+      "Module 7: Clause 10: Improvement",
+      "Module 8: Review and questions"
+    ],
     prerequisites: ["None"],
     targetAudience: ["Compliance Officers", "Management", "Auditors"]
   },
