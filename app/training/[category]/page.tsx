@@ -9,6 +9,7 @@ import {
   categoryLabels, 
   type TrainingCategory 
 } from "@/lib/data"
+import { TrainingSearch } from "@/components/training-search"
 
 const validCategories = ["cyber-security", "it", "general"]
 
@@ -65,6 +66,7 @@ export default async function TrainingCategoryPage({ params }: PageProps) {
             Explore our comprehensive {categoryLabel.toLowerCase()} training programs delivered by 
             industry experts. All programs are fully claimable under HRDCorp.
           </p>
+          <TrainingSearch />
         </div>
       </section>
       </ScrollReveal>
@@ -77,7 +79,7 @@ export default async function TrainingCategoryPage({ params }: PageProps) {
             {trainings.map((training) => {
               
               return (
-                <Card key={training.id} className="group hover:shadow-md transition-shadow border-border/50">
+                <Card key={training.id} id={training.id} className="group hover:shadow-md transition-shadow border-border/50 scroll-mt-24">
                   <CardHeader>
                     <div className="flex items-start justify-between gap-4">
                       <div>
