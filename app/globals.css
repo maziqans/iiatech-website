@@ -141,8 +141,6 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    /* Add smooth transition for all color and background properties */
-    @apply transition-all duration-500;
   }
   body {
     @apply bg-background text-foreground;
