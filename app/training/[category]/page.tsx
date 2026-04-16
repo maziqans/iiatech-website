@@ -1,107 +1,22 @@
 import Link from "next/link"
-import { notFound } from "next/navigation"
-import { ArrowLeft, Clock, FileText } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ScrollReveal } from "@/components/scroll-reveal"
-import { Badge } from "@/components/ui/badge"
-import { 
-  getTrainingsByCategory, 
-  categoryLabels, 
-  type TrainingCategory 
-} from "@/lib/data"
-import { TrainingSearch } from "@/components/training-search"
-
-const validCategories = ["cyber-security", "it", "general"]
+import { ArrowLeft } from "lucide-react"
 
 interface PageProps {
-  params: Promise<{ category: string }>
+  params: Promise<{ category: string; slug: string }>
 }
 
-export async function generateStaticParams() {
-  return validCategories.map((category) => ({
-    category,
-  }))
-}
-
-export default async function TrainingCategoryPage({ params }: PageProps) {
-  const { category } = await params
-
-  if (!validCategories.includes(category)) {
-    notFound()
-  }
-
-  const trainings = getTrainingsByCategory(category as TrainingCategory)
-  const categoryLabel = categoryLabels[category as TrainingCategory]
+export default async function TrainingDetailsPage({ params }: PageProps) {
+  const { category, slug } = await params
 
   return (
-    <div className="min-h-screen pb-20">
-      {/* Header */}
-      <ScrollReveal>
-      <section className="bg-muted/30 border-b border-border/40 py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Link
-            href="/#training"
-            className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors"
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to All Programs
-          </Link>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mb-6 tracking-tight text-balance">
-            {categoryLabel} Training
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-            Explore our comprehensive {categoryLabel.toLowerCase()} training programs delivered by 
-            industry experts. All programs are fully claimable under HRDCorp.
-          </p>
-          <TrainingSearch />
-        </div>
-      </section>
-      </ScrollReveal>
-
-      {/* Trainings List */}
-      <ScrollReveal>
-      <section className="py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-6">
-            {trainings.map((training) => {
-              
-              return (
-                <Card key={training.id} id={training.id} className="group hover:shadow-md transition-shadow border-border/50 scroll-mt-24">
-                  <CardHeader>
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <Badge variant="secondary" className="mb-3 font-normal">
-                          {categoryLabels[training.category as TrainingCategory]}
-                        </Badge>
-                        <CardTitle className="text-xl mb-2 leading-tight">{training.title}</CardTitle>
-                        <CardDescription className="text-base">{training.description}</CardDescription>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-muted-foreground">
-                      <div className="flex items-center gap-1.5">
-                        <Clock className="h-4 w-4" />
-                        <span>{training.duration}</span>
-                      </div>
-                    </div>
-                    <a
-                      href={training.pdfUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-md border border-border bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-muted hover:text-foreground w-full sm:w-auto"
-                    >
-                      <FileText className="mr-2 h-4 w-4" />
-                      View Brochure
-                    </a>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-      </ScrollReveal>
+    <div className="min-h-screen py-32 flex flex-col items-center justify-center text-center px-4">
+      <h1 className="text-3xl font-bold mb-4">Training Details Placeholder</h1>
+      <p className="text-muted-foreground mb-8">The routing for <strong>{slug}</strong> works perfectly! We can build the layout next.</p>
+      
+      <Link href={`/training/${category}`} className="inline-flex items-center text-primary hover:underline">
+        <ArrowLeft className="mr-2 h-4 w-4" />
+        Back to Category
+      </Link>
     </div>
   )
 }
