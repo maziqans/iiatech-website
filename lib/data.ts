@@ -12,8 +12,6 @@ export interface Training {
   objectives: string[]
   prerequisites: string[]
   targetAudience: string[]
-  overview?: string
-  modules?: string[]
 }
 
 export interface Trainer {
@@ -37,25 +35,7 @@ export const trainings: Training[] = [
     duration: "1 day",
     trainerId: "trainer-ammar",
     pdfUrl: "/training-posters/cybersec-and-scams-training.pdf",
-    objectives: [
-      "Identify modern AI-driven scams including Deepfakes and Voice Cloning.",
-      "Apply the CIA Triad to secure business data and financial transactions.",
-      "Detect AI-assisted malware before it penetrates your network.",
-      "Establish a culture of security with low-cost, high-impact best practices."
-    ],
-    overview: "In 2026, the digital battlefield has shifted; scammers no longer rely on suspicious emails or clumsy phishing attempts. Today, they leverage sophisticated AI to clone executive voices with eerie accuracy, generate deepfake videos of \"trusted\" partners, and deploy custom-coded viruses that adapt to your security in real-time. This intensive, 1-day program is specifically designed to flip the script, transforming your employees from your \"weakest link\" into a formidable \"strongest defense.\" We strip away the intimidating technical jargon and provide your team with practical, direct tools and psychological frameworks to identify and neutralize threats before they can penetrate your business.",
-    modules: [
-      "Module 1: Local and Global Latest Cyber Climate",
-      "Module 2: Case Studies: Real-life Cyberattacks in Information Security",
-      "Module 3: Introduction: The Role of Artificial Intelligence (AI) in Scams",
-      "Module 4: How AI Makes Attacks More Effective",
-      "Module 5: Deepfake (Detection and Impact)",
-      "Module 6: Voice Cloning (Detection and Impact)",
-      "Module 7: The Evolution of AI",
-      "Module 8: AI-Assisted Malware Creation & Delivery",
-      "Module 9: Detection and Protection Against AI-Assisted Attacks",
-      "Module 10: Best Practices for Securing Personal and Financial Information"
-    ],
+    objectives: ["Identify common cyber threats", "Protect SME infrastructure", "Recognize scams and phishing"],
     prerequisites: ["None"],
     targetAudience: ["SME Owners", "Employees", "Information Technology Staff"]
   },
