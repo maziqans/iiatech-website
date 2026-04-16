@@ -1,156 +1,140 @@
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowLeft, Clock, FileText } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import type { Metadata } from "next"
+import { ArrowLeft, Clock, FileText, CheckCircle2, BookOpen } from "lucide-react"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { Badge } from "@/components/ui/badge"
-import { 
-  getTrainingsByCategory, 
-  categoryLabels, 
-  type TrainingCategory 
-} from "@/lib/data"
-import { TrainingSearch } from "@/components/training-search"
-
-const validCategories = ["cyber-security", "it", "general"]
+import { Button } from "@/components/ui/button"
+import { getTrainingBySlug, categoryLabels, trainings, type TrainingCategory } from "@/lib/data"
 
 interface PageProps {
-  params: Promise<{ category: string }>
+  params: Promise<{ category: string; slug: string }>
 }
 
 export async function generateStaticParams() {
-  return validCategories.map((category) => ({
-    category,
+  return trainings.map((training) => ({
+    category: training.category,
+    slug: training.slug,
   }))
 }
 
-export async function generateMetadata({ params }: PageProps) {
-  const { category } = await params
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params
+  const training = getTrainingBySlug(slug)
   
-  if (!validCategories.includes(category)) {
+  if (!training) {
     return { title: "Not Found" }
   }
   
-  const categoryLabel = categoryLabels[category as TrainingCategory]
-  
   return {
-    title: `${categoryLabel} Training | IIA Technology`,
-    description: `Professional ${categoryLabel} training programs by IIA Technology, a HRDCorp registered training provider in Malaysia.`,
+    title: `${training.title} | IIA Technology`,
+    description: training.description,
   }
 }
 
-export default async function TrainingCategoryPage({ params }: PageProps) {
-  const { category } = await params
-  
-  if (!validCategories.includes(category)) {
+export default async function TrainingDetailsPage({ params }: PageProps) {
+  const { category, slug } = await params
+  const training = getTrainingBySlug(slug)
+
+  // Validate the training exists and belongs to the given category
+  if (!training || training.category !== category) {
     notFound()
   }
 
-  const trainings = getTrainingsByCategory(category as TrainingCategory)
-  const categoryLabel = categoryLabels[category as TrainingCategory]
-
   return (
-    <div className="min-h-screen">
-      {/* Header - Neutral white/grey styling */}
+    <div className="min-h-screen pb-20">
+      {/* Header */}
       <ScrollReveal>
-      <section className="bg-muted/30 border-b border-border/40 py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Link
-            href="/"
-            className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-6 transition-colors"
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Home
-          </Link>
-          <h1 className="text-4xl sm:text-5xl font-semibold text-foreground mb-4 tracking-tight">{categoryLabel} Training</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl">
-            Explore our comprehensive {categoryLabel.toLowerCase()} training programs delivered by 
-            industry experts. All programs are fully claimable under HRDCorp.
-          </p>
-          <TrainingSearch />
-        </div>
-      </section>
-      </ScrollReveal>
-
-      {/* Training List */}
-      <ScrollReveal>
-      <section className="py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-6">
-            {trainings.map((training) => {
-              
-              return (
-                <Card key={training.id} id={training.id} className="group hover:shadow-md transition-shadow border-border/50 scroll-mt-24">
-                  <CardHeader>
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <Badge variant="secondary" className="mb-3 font-normal">
-                          {categoryLabel}
-                        </Badge>
-                        <CardTitle className="text-xl">{training.title}</CardTitle>
-                        <CardDescription className="mt-2">
-                          {training.description}
-                        </CardDescription>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
-                      <div className="flex items-center gap-2">
-                        <Clock className="h-4 w-4" />
-                        <span>{training.duration}</span>
-                      </div>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <Link
-                        href={`/training/${category}/${training.slug}`}
-                        className="inline-flex items-center justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 w-full sm:w-auto"
-                      >
-                        View Details
-                      </Link>
-                      <a
-                        href={training.pdfUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center rounded-md border border-border bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-muted hover:text-foreground w-full sm:w-auto"
-                      >
-                        <FileText className="mr-2 h-4 w-4" />
-                        Brochure
-                      </a>
-                    </div>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
-
-          {trainings.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-muted-foreground">No training programs available in this category.</p>
+        <section className="bg-muted/30 border-b border-border/40 py-16 lg:py-24">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Link
+              href={`/training/${category}`}
+              className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors"
+            >
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to {categoryLabels[training.category as TrainingCategory]}
+            </Link>
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <Badge variant="secondary" className="font-normal">
+                {categoryLabels[training.category as TrainingCategory]}
+              </Badge>
+              <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                <Clock className="h-4 w-4" />
+                <span>{training.duration}</span>
+              </div>
             </div>
-          )}
-        </div>
-      </section>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mb-6 tracking-tight text-balance">
+              {training.title}
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              {training.description}
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button asChild size="lg">
+                <Link href="/contact">Enquire Now</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <a href={training.pdfUrl} target="_blank" rel="noopener noreferrer">
+                  <FileText className="mr-2 h-4 w-4" />
+                  Download Brochure
+                </a>
+              </Button>
+            </div>
+          </div>
+        </section>
       </ScrollReveal>
 
-      {/* CTA Section - Neutral styling */}
+      {/* Details Content */}
       <ScrollReveal>
-      <section className="py-16 bg-muted/20 border-t border-border/40">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-foreground mb-4 tracking-tight">
-            Interested in {categoryLabel} Training?
-          </h2>
-          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Contact us to learn more about our training programs and how we can 
-            customize them to meet your organization&apos;s needs.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center rounded-md border border-foreground/20 bg-background px-6 py-3 text-sm font-medium text-foreground hover:bg-foreground hover:text-background transition-all"
-          >
-            Contact Us
-          </Link>
-        </div>
-      </section>
+        <section className="py-16">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-16">
+            
+            {/* Overview */}
+            {(training.overview || training.description) && (
+              <div>
+                <h2 className="text-2xl font-semibold text-foreground mb-4 tracking-tight">Training Overview</h2>
+                <div className="prose prose-neutral dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
+                  <p>{training.overview || training.description}</p>
+                </div>
+              </div>
+            )}
+
+            {/* Learning Outcomes */}
+            {training.objectives && training.objectives.length > 0 && (
+              <div>
+                <h2 className="text-2xl font-semibold text-foreground mb-6 tracking-tight">Learning Outcomes</h2>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {training.objectives.map((objective, i) => (
+                    <div key={i} className="flex items-start gap-3 p-4 rounded-xl border border-border/50 bg-card shadow-sm">
+                      <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm text-foreground/90 leading-relaxed">{objective}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Course Content / Modules */}
+            {training.modules && training.modules.length > 0 && (
+              <div>
+                <h2 className="text-2xl font-semibold text-foreground mb-6 tracking-tight">Course Content</h2>
+                <div className="space-y-3">
+                  {training.modules.map((mod, i) => (
+                    <div key={i} className="flex items-start gap-3 p-4 rounded-xl border border-border/50 bg-card hover:border-primary/20 transition-colors shadow-sm">
+                      <div className="mt-0.5">
+                        <BookOpen className="h-4 w-4 text-muted-foreground" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-foreground/90">{mod}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+          </div>
+        </section>
       </ScrollReveal>
     </div>
   )
