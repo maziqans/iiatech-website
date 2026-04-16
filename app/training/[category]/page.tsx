@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowLeft, Clock, FileText } from "lucide-react"
+import { ArrowLeft, Clock, FileText, ArrowRight } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { Badge } from "@/components/ui/badge"
@@ -66,18 +66,23 @@ export default async function TrainingCategoryPage({ params }: PageProps) {
             {trainings.map((training) => {
               
               return (
-                <Card key={training.id} id={training.id} className="relative group hover:shadow-md transition-shadow border-border/50 scroll-mt-24 flex flex-col overflow-hidden">
+                <Card key={training.id} id={training.id} className="relative group hover:shadow-xl hover:shadow-primary/20 dark:hover:shadow-primary/30 hover:border-primary/50 transition-all duration-300 border-border/50 scroll-mt-24 flex flex-col overflow-hidden hover:-translate-y-1 cursor-pointer">
                   <Link href={`/training-details?id=${training.id}`} className="absolute inset-0 z-10">
                     <span className="sr-only">View details for {training.title}</span>
                   </Link>
                   <CardHeader>
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
+                    <div className="flex items-start justify-between gap-4 relative">
+                      <div className="pr-12">
                         <Badge variant="secondary" className="mb-3 font-normal">
                           {categoryLabels[training.category as TrainingCategory]}
                         </Badge>
-                        <CardTitle className="text-xl mb-2 leading-tight">{training.title}</CardTitle>
+                        <CardTitle className="text-xl mb-2 leading-tight group-hover:text-primary transition-colors">{training.title}</CardTitle>
                         <CardDescription className="text-base">{training.description}</CardDescription>
+                      </div>
+                      <div className="absolute top-0 right-0 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 z-0">
+                        <div className="bg-primary/10 text-primary p-2.5 rounded-full">
+                          <ArrowRight className="h-5 w-5" />
+                        </div>
                       </div>
                     </div>
                   </CardHeader>

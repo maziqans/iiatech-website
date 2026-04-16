@@ -55,13 +55,13 @@ export function TrainingSearch() {
                   key={training.id} 
                   href={`/training-details?id=${training.id}`}
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between px-4 py-3 hover:bg-muted/50 transition-colors gap-4"
+                  className="group flex items-center justify-between px-4 py-3 hover:bg-primary/5 transition-colors gap-4 border-l-2 border-transparent hover:border-primary"
                 >
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-foreground truncate">{training.title}</p>
+                    <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors truncate">{training.title}</p>
                     <p className="text-xs text-muted-foreground truncate mt-0.5">{training.description}</p>
                   </div>
-                  <Badge variant="secondary" className="shrink-0 text-[10px] font-normal">
+                  <Badge variant="secondary" className="shrink-0 text-[10px] font-normal group-hover:bg-primary/10 group-hover:text-primary transition-colors">
                     {categoryLabels[training.category as TrainingCategory]}
                   </Badge>
                 </Link>
