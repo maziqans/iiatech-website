@@ -113,7 +113,23 @@ export const trainings: Training[] = [
     duration: "1 day",
     trainerId: "trainer-zafir",
     pdfUrl: "/training-posters/ai-spm-success.pdf",
-    objectives: ["Understand AI tools", "Improve study efficiency", "Ethical use of AI"],
+    objectives: [
+      "Study smarter with AI: Learn how to use AI to make quizzes, ask questions, and revise subjects like BM, BI, Science, and Sejarah.",
+      "Use AI to explain difficult topics in simple steps and compare answers with textbooks.",
+      "Get help from AI to choose better words, fix paragraphs, and write stronger intros and conclusions.",
+      "Use AI to create study schedules, set goals, and stay focused with fun and helpful prompts.",
+      "Learn how to use AI safely and responsibly without copying or getting the wrong answers."
+    ],
+    overview: "In today’s digital era, preparing for SPM requires more than traditional study methods. This one-day module equips Form 5 students with practical AI skills to enhance revision, generate subject-specific questions, improve essays, and manage study plans. Through hands-on activities and guided prompting, participants will learn to study smarter, not harder, leveraging AI ethically for academic success.",
+    modules: [
+      "Module 1: Introduction to AI & Prompting Basics",
+      "Module 2: Prompting AI to Generate SPM Questions",
+      "Module 3: Prompting AI to Explain Topics Like a Teacher",
+      "Module 4: Using AI to Improve Essays (BM & BI)",
+      "Module 5: AI as a Study Planner & Motivation Coach",
+      "Module 6: AI Ethics & Smart Usage Habits",
+      "Module 7: Showcase, Reflection & Closing"
+    ],
     prerequisites: ["None"],
     targetAudience: ["SPM Students", "Educators"]
   },
