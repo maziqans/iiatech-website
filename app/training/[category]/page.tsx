@@ -100,15 +100,23 @@ export default async function TrainingCategoryPage({ params }: PageProps) {
                         <span>{training.duration}</span>
                       </div>
                     </div>
-                    <a
-                      href={training.pdfUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-md border border-border bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-muted hover:text-foreground w-full sm:w-auto"
-                    >
-                      <FileText className="mr-2 h-4 w-4" />
-                      View Brochure
-                    </a>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Link
+                        href={`/training/${category}/${training.slug}`}
+                        className="inline-flex items-center justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 w-full sm:w-auto"
+                      >
+                        View Details
+                      </Link>
+                      <a
+                        href={training.pdfUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center rounded-md border border-border bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-muted hover:text-foreground w-full sm:w-auto"
+                      >
+                        <FileText className="mr-2 h-4 w-4" />
+                        Brochure
+                      </a>
+                    </div>
                   </CardContent>
                 </Card>
               )

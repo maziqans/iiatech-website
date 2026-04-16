@@ -53,7 +53,7 @@ export function TrainingSearch() {
               {filteredTrainings.map(training => (
                 <Link 
                   key={training.id} 
-                  href={`/training/${training.category}#${training.id}`}
+                  href={`/training/${training.category}/${training.slug}`}
                   onClick={() => setIsOpen(false)}
                   className="flex items-center justify-between px-4 py-3 hover:bg-muted/50 transition-colors gap-4"
                 >
