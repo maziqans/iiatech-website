@@ -1,12 +1,11 @@
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowLeft, Clock, User, FileText } from "lucide-react"
+import { ArrowLeft, Clock, FileText } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { Badge } from "@/components/ui/badge"
 import { 
   getTrainingsByCategory, 
-  getTrainerById, 
   categoryLabels, 
   type TrainingCategory 
 } from "@/lib/data"
@@ -76,7 +75,6 @@ export default async function TrainingCategoryPage({ params }: PageProps) {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-6">
             {trainings.map((training) => {
-              const trainer = getTrainerById(training.trainerId)
               
               return (
                 <Card key={training.id} className="group hover:shadow-md transition-shadow border-border/50">
@@ -99,17 +97,6 @@ export default async function TrainingCategoryPage({ params }: PageProps) {
                         <Clock className="h-4 w-4" />
                         <span>{training.duration}</span>
                       </div>
-                      {trainer && (
-                        <div className="flex items-center gap-2">
-                          <User className="h-4 w-4" />
-                          <Link
-                            href={`/consultants?trainer=${trainer.id}`}
-                            className="hover:text-foreground transition-colors underline underline-offset-4"
-                          >
-                            {trainer.name}
-                          </Link>
-                        </div>
-                      )}
                     </div>
                     <a
                       href={training.pdfUrl}

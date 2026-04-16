@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react"
 import { useSearchParams } from "next/navigation"
 import Image from "next/image"
-import { ChevronDown, FileText, User } from "lucide-react"
+import { ChevronDown, User } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
-import { trainers, getTrainingById, categoryLabels, type TrainingCategory } from "@/lib/data"
+import { trainers } from "@/lib/data"
 
 export function TrainerAccordion() {
   const searchParams = useSearchParams()
@@ -38,9 +38,6 @@ export function TrainerAccordion() {
     <div className="space-y-3">
       {trainers.map((trainer) => {
         const isOpen = openTrainers.includes(trainer.id)
-        const trainerTrainings = trainer.trainings
-          .map((id) => getTrainingById(id))
-          .filter(Boolean)
 
         return (
           <div
@@ -120,44 +117,6 @@ export function TrainerAccordion() {
                             {skill}
                           </Badge>
                         ))}
-                      </div>
-                    </div>
-
-                    {/* Trainings Offered */}
-                    <div>
-                      <h4 className="font-medium text-xs text-muted-foreground uppercase tracking-wider mb-2.5">
-                        Training Programs
-                      </h4>
-                      <div className="space-y-2">
-                        {trainerTrainings.map((training) => {
-                          if (!training) return null
-                          return (
-                            <a
-                              key={training.id}
-                              href={training.pdfUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="group flex items-center justify-between p-3.5 bg-muted/40 hover:bg-muted/60 border border-transparent hover:border-primary/20 hover:shadow-md hover:shadow-primary/10 dark:hover:shadow-primary/25 hover:-translate-y-0.5 rounded-lg transition-all duration-300"
-                            >
-                              <div className="flex-1 min-w-0">
-                                <p className="font-medium text-sm text-foreground group-hover:text-primary transition-colors">
-                                  {training.title}
-                                </p>
-                                <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1">
-                                  {training.description}
-                                </p>
-                              </div>
-                              <div className="flex items-center gap-2 ml-3 shrink-0">
-                                <Badge variant="outline" className="text-xs font-normal">
-                                  {categoryLabels[
-                                    training.category as TrainingCategory
-                                  ]}
-                                </Badge>
-                                <FileText className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:scale-110 transition-all duration-300" />
-                              </div>
-                            </a>
-                          )
-                        })}
                       </div>
                     </div>
                   </div>
